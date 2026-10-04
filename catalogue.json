@@ -5,7 +5,7 @@
     {
       "id": "file-explorer",
       "name": "Explorateur de fichiers",
-      "version": "1.0.10",
+      "version": "1.0.11",
       "description": "L'onglet Fichiers de chaque agent (dépôt, archives, scripts, corbeille) et l'explorateur de ~/.allkin.",
       "author": "Allkin",
       "permissions": [
@@ -69,8 +69,8 @@
         },
         {
           "path": "explorer.css",
-          "size": 23157,
-          "sha256": "78ab0c590509b649fcd9ccde9e36de4c143fc69e55208d0248aecaa8f7cd0e85"
+          "size": 22883,
+          "sha256": "b48d8bcbd24d547f3163f035fd99a817eb077770b2214a0e9e7ac81524611f64"
         },
         {
           "path": "explorer.js",
@@ -90,7 +90,7 @@
         {
           "path": "plugin.json",
           "size": 1535,
-          "sha256": "5160453e324b084c8faf822c4e02d0a04a13b061bb9c5c99ee380ebd06542b67"
+          "sha256": "67e5e304756b47a6a58b3c23590281487f19f3ec8197b16ab3cf88f0e152a60d"
         },
         {
           "path": "validation.json",
@@ -99,8 +99,8 @@
         },
         {
           "path": "view.html",
-          "size": 27614,
-          "sha256": "3e4e9f3e60b4040ba8937c82a8714a6e219de9ae2d17ef615b901fb02e694852"
+          "size": 27920,
+          "sha256": "373070aabea0d55282eea9bfdbda57b5a4dd74d371a60c86a04bca27a7bf7248"
         }
       ]
     },
@@ -214,7 +214,7 @@
     {
       "id": "promptr",
       "name": "Promptr",
-      "version": "1.0.3",
+      "version": "1.0.4",
       "description": "L'atelier de prompts : dessinez un agent en blocs, ou ouvrez un prompt existant pour le voir en plan. Son agent dédié écrit le prompt depuis le plan, et le plan depuis un prompt.",
       "author": "Allkin",
       "permissions": [
@@ -314,12 +314,12 @@
         {
           "path": "plugin.json",
           "size": 3067,
-          "sha256": "27bd28235c8f82b9713f4d24ebf267ccbdd60683a26be825b50fc1f6a62d3e54"
+          "sha256": "9d78009c09bfaae79791d5ff4b98dec86b54c0cc6190f94fa2b6c925a38ed67f"
         },
         {
           "path": "promptr.css",
-          "size": 26851,
-          "sha256": "324bce3f6a95636b2f5004dd81d1e3e8da1acbcf1b50678c3250ce64566bffa0"
+          "size": 25868,
+          "sha256": "49aa2006e5ed7ef20fbf2b86f6d79d485023259edc08af3df586f3bc274262e7"
         },
         {
           "path": "validation.json",
@@ -328,8 +328,8 @@
         },
         {
           "path": "view.html",
-          "size": 13630,
-          "sha256": "26c4d2e2934ab4a511b200e99b8defb60c5b4c6d1ad9425cd13916e0250d30aa"
+          "size": 13326,
+          "sha256": "313ffac0b32582cef9b8a6f8b3f3391bd66cc90240f938c9fb4105d031748900"
         },
         {
           "path": "zip.js",

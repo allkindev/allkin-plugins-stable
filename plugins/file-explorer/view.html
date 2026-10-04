@@ -8,11 +8,13 @@
         <span id="data-drop-veil-text" data-i18n="plugin.file-explorer.drop.here">Drop here</span>
       </div>
       <!-- En-tête : où l'on est, et ce qu'on peut y créer. -->
-      <div class="data-view-header">
+      <!-- Allkin's page bar: the icon of the page, the path, the actions. -->
+      <div class="data-view-header page-bar">
+        <span class="page-bar-icon" data-page-icon="files" aria-hidden="true"></span>
         <div class="data-breadcrumb" id="data-breadcrumb"></div>
         <!-- Tout ce qu'on fait ici tient dans ces boutons : le menu ⋮ de
              l'en-tête d'Allkin n'a rien à proposer sur cette page. -->
-        <div class="data-header-actions">
+        <div class="data-header-actions page-bar-actions">
           <button type="button" class="secondary data-header-btn" id="data-filter-btn" title="Search" data-i18n-title="common.search" aria-label="Search" data-i18n-aria-label="common.search" aria-expanded="false" aria-controls="data-toolbar">
             <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
           </button>
@@ -92,10 +94,11 @@
          depuis l'accueil. Voir server/allkin-fs.ts pour les garde-fous ; côté
          interface, il n'y a délibérément aucune action d'écriture. -->
     <div class="explorer-view hidden" id="explorer-view">
-      <div class="data-view-header">
+      <div class="data-view-header page-bar">
+        <span class="page-bar-icon" data-page-icon="explorer" aria-hidden="true"></span>
         <div class="data-breadcrumb" id="explorer-breadcrumb"></div>
         <span class="explorer-readonly" data-i18n="plugin.file-explorer.explorer.readOnly">read only</span>
-        <div class="data-header-actions">
+        <div class="data-header-actions page-bar-actions">
           <button type="button" class="secondary data-header-btn" id="explorer-filter-btn" title="Search" data-i18n-title="common.search" aria-label="Search" data-i18n-aria-label="common.search" aria-expanded="false" aria-controls="explorer-toolbar">
             <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" aria-hidden="true"><circle cx="11" cy="11" r="6.5"/><path d="M20 20l-4.2-4.2"/></svg>
           </button>

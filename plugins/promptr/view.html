@@ -5,33 +5,31 @@
          Les blocs, leurs fenêtres de réglage et les listes sont construits en
          JS (blocks.js, app.js) : ce fichier ne porte que la charpente. -->
     <div class="pr-view hidden" id="pr-view">
-      <header class="pr-head">
-        <span class="pr-logo" aria-hidden="true">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="5" rx="1.5"/><rect x="3" y="16" width="8" height="5" rx="1.5"/><path d="M7 8v8"/><path d="M11 12.5h2"/></svg>
-        </span>
-        <div class="pr-head-text">
-          <h2 class="pr-title" id="pr-title">Promptr</h2>
-          <span class="pr-subtitle" id="pr-subtitle" data-i18n="plugin.promptr.head.subtitle">The prompt workshop</span>
-        </div>
+      <!-- Allkin's page bar: the icon of the page, the plan shown, the panes
+           and the actions. -->
+      <header class="pr-head page-bar">
+        <span class="page-bar-icon" data-page-icon="promptr" aria-hidden="true"></span>
+        <span class="page-bar-text" id="pr-title">Promptr</span>
+        <span class="page-bar-meta" id="pr-subtitle" data-i18n="plugin.promptr.head.subtitle">The prompt workshop</span>
         <nav class="pr-tabs" role="tablist" aria-label="Promptr panes" data-i18n-aria-label="plugin.promptr.head.panes">
           <button type="button" class="pr-tab" role="tab" data-pr-tab="plan" data-i18n="plugin.promptr.tab.plan">Plan</button>
           <button type="button" class="pr-tab" role="tab" data-pr-tab="prompt"><span data-i18n="plugin.promptr.tab.prompt">Prompt</span><span class="pr-tab-dot hidden" id="pr-prompt-dot" title="The plan has changed since the prompt was generated" data-i18n-title="plugin.promptr.tab.staleDot"></span></button>
           <button type="button" class="pr-tab" role="tab" data-pr-tab="test" data-i18n="plugin.promptr.tab.test">Try</button>
         </nav>
-        <div class="pr-head-actions">
-          <button type="button" class="pr-btn pr-btn-quiet" id="pr-open-btn" title="Open an existing prompt or a plan" data-i18n-title="plugin.promptr.head.openTitle">
+        <div class="pr-head-actions page-bar-actions">
+          <button type="button" id="pr-open-btn" title="Open an existing prompt or a plan" data-i18n-title="plugin.promptr.head.openTitle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
             <span data-i18n="common.open">Open</span>
           </button>
-          <button type="button" class="pr-btn pr-btn-quiet" id="pr-new-btn" title="Start again from a blank plan" data-i18n-title="plugin.promptr.head.newTitle">
+          <button type="button" id="pr-new-btn" title="Start again from a blank plan" data-i18n-title="plugin.promptr.head.newTitle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
             <span data-i18n="plugin.promptr.head.new">New</span>
           </button>
-          <button type="button" class="pr-btn pr-btn-quiet" id="pr-download-btn" title="Download the agent as a .allkin file" data-i18n-title="plugin.promptr.head.downloadTitle">
+          <button type="button" id="pr-download-btn" title="Download the agent as a .allkin file" data-i18n-title="plugin.promptr.head.downloadTitle">
             <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
             <span>.allkin</span>
           </button>
-          <button type="button" class="pr-btn pr-btn-primary" id="pr-deploy-btn" title="Create this agent in Allkin" data-i18n-title="plugin.promptr.head.deployTitle">
+          <button type="button" class="page-bar-primary" id="pr-deploy-btn" title="Create this agent in Allkin" data-i18n-title="plugin.promptr.head.deployTitle">
             <span data-i18n="plugin.promptr.head.deploy">Deploy</span>
           </button>
         </div>

@@ -20,19 +20,9 @@
 #explorer-view .data-view-header { flex-wrap: nowrap; gap: var(--sp-3); }
 #data-view .data-breadcrumb,
 #explorer-view .data-breadcrumb { flex: 1; min-width: 0; }
-.data-header-actions { display: flex; align-items: center; gap: var(--sp-1); flex-shrink: 0; }
-/* Des boutons icône, carrés : le libellé est dans l'infobulle. */
-button.data-header-btn {
-  display: grid;
-  place-items: center;
-  width: 2.2rem;
-  height: 2.2rem;
-  min-width: 0;
-  min-height: 0;
-  padding: 0;
-  border-radius: 9px;
-}
-button.data-header-btn .icon { width: 1.1rem; height: 1.1rem; }
+/* The header is Allkin's page bar (.page-bar): it sizes the buttons, on a
+   desktop and on a phone. Icon buttons: the label is in the tooltip. */
+.data-header-actions { display: flex; align-items: center; flex-shrink: 0; }
 button.data-header-btn.active { background: var(--accent-soft); border-color: var(--accent); color: var(--accent); }
 button.data-header-btn.active .icon { stroke: var(--accent); }
 
@@ -398,8 +388,6 @@ button.data-select-act.data-select-done:hover { background: var(--accent); filte
   .data-breadcrumb::-webkit-scrollbar { display: none; }
   .data-crumb { white-space: nowrap; max-width: 10rem; }
   #data-view .data-view-header, #explorer-view .data-view-header { gap: var(--sp-2); }
-  .data-header-actions { gap: 2px; }
-  button.data-header-btn { width: 2.15rem; height: 2.15rem; }
   .data-sort { display: block; }
   .explorer-readonly { display: none; }
 
