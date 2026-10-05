@@ -18,15 +18,15 @@
         </nav>
         <div class="pr-head-actions page-bar-actions">
           <button type="button" id="pr-open-btn" title="Open an existing prompt or a plan" data-i18n-title="plugin.promptr.head.openTitle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,74H130.49l-27.9-27.9a13.94,13.94,0,0,0-9.9-4.1H40A14,14,0,0,0,26,56V200.62A13.39,13.39,0,0,0,39.38,214H216.89A13.12,13.12,0,0,0,230,200.89V88A14,14,0,0,0,216,74ZM40,54H92.69a2,2,0,0,1,1.41.59L113.51,74H38V56A2,2,0,0,1,40,54ZM218,200.89a1.11,1.11,0,0,1-1.11,1.11H39.38A1.4,1.4,0,0,1,38,200.62V86H216a2,2,0,0,1,2,2Z"/></g></svg>
             <span data-i18n="common.open">Open</span>
           </button>
           <button type="button" id="pr-new-btn" title="Start again from a blank plan" data-i18n-title="plugin.promptr.head.newTitle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><path d="M12 5v14M5 12h14"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></g></svg>
             <span data-i18n="plugin.promptr.head.new">New</span>
           </button>
           <button type="button" id="pr-download-btn" title="Download the agent as a .allkin file" data-i18n-title="plugin.promptr.head.downloadTitle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3v12m0 0l-4-4m4 4l4-4"/><path d="M4 17v2a2 2 0 002 2h12a2 2 0 002-2v-2"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,144v64a6,6,0,0,1-6,6H40a6,6,0,0,1-6-6V144a6,6,0,0,1,12,0v58H210V144a6,6,0,0,1,12,0Zm-98.24,4.24a6,6,0,0,0,8.48,0l40-40a6,6,0,0,0-8.48-8.48L134,129.51V32a6,6,0,0,0-12,0v97.51L92.24,99.76a6,6,0,0,0-8.48,8.48Z"/></g></svg>
             <span>.allkin</span>
           </button>
           <button type="button" class="page-bar-primary" id="pr-deploy-btn" title="Create this agent in Allkin" data-i18n-title="plugin.promptr.head.deployTitle">
@@ -42,12 +42,12 @@
           <h3 class="pr-start-title" data-i18n="plugin.promptr.start.title">Where do you want to start?</h3>
           <div class="pr-start-choices">
             <button type="button" class="pr-start-card" id="pr-start-open">
-              <span class="pr-start-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h4"/></svg></span>
+              <span class="pr-start-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M212.24,83.76l-56-56A6,6,0,0,0,152,26H56A14,14,0,0,0,42,40V216a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V88A6,6,0,0,0,212.24,83.76ZM158,46.48,193.52,82H158ZM200,218H56a2,2,0,0,1-2-2V40a2,2,0,0,1,2-2h90V88a6,6,0,0,0,6,6h50V216A2,2,0,0,1,200,218Zm-34-82a6,6,0,0,1-6,6H96a6,6,0,0,1,0-12h64A6,6,0,0,1,166,136Zm0,32a6,6,0,0,1-6,6H96a6,6,0,0,1,0-12h64A6,6,0,0,1,166,168Z"/></g></svg></span>
               <strong data-i18n="plugin.promptr.start.open.title">Open an existing prompt</strong>
               <span data-i18n="plugin.promptr.start.open.text">Paste a prompt, choose a file or an installed agent: Promptr draws it in blocks.</span>
             </button>
             <button type="button" class="pr-start-card" id="pr-start-blank">
-              <span class="pr-start-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="3" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="5" rx="1.5"/><rect x="3" y="16" width="8" height="5" rx="1.5"/><path d="M7 8v8"/><path d="M11 12.5h2"/></svg></span>
+              <span class="pr-start-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M160,110h48a14,14,0,0,0,14-14V48a14,14,0,0,0-14-14H160a14,14,0,0,0-14,14V66H128a22,22,0,0,0-22,22v34H70V112A14,14,0,0,0,56,98H24a14,14,0,0,0-14,14v32a14,14,0,0,0,14,14H56a14,14,0,0,0,14-14V134h36v34a22,22,0,0,0,22,22h18v18a14,14,0,0,0,14,14h48a14,14,0,0,0,14-14V160a14,14,0,0,0-14-14H160a14,14,0,0,0-14,14v18H128a10,10,0,0,1-10-10V88a10,10,0,0,1,10-10h18V96A14,14,0,0,0,160,110ZM58,144a2,2,0,0,1-2,2H24a2,2,0,0,1-2-2V112a2,2,0,0,1,2-2H56a2,2,0,0,1,2,2Zm100,16a2,2,0,0,1,2-2h48a2,2,0,0,1,2,2v48a2,2,0,0,1-2,2H160a2,2,0,0,1-2-2Zm0-112a2,2,0,0,1,2-2h48a2,2,0,0,1,2,2V96a2,2,0,0,1-2,2H160a2,2,0,0,1-2-2Z"/></g></svg></span>
               <strong data-i18n="plugin.promptr.start.blank.title">Start from a blank plan</strong>
               <span data-i18n="plugin.promptr.start.blank.text">Add your blocks one by one, then let Promptr write the prompt.</span>
             </button>
@@ -62,7 +62,7 @@
           <ol class="pr-flow" id="pr-flow"></ol>
           <div class="pr-canvas-foot">
             <button type="button" class="pr-btn pr-btn-primary pr-generate" id="pr-generate-btn">
-              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4z"/></svg>
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M196.89,130.94,144.4,111.6,125.06,59.11a13.92,13.92,0,0,0-26.12,0L79.6,111.6,27.11,130.94a13.92,13.92,0,0,0,0,26.12L79.6,176.4l19.34,52.49a13.92,13.92,0,0,0,26.12,0L144.4,176.4l52.49-19.34a13.92,13.92,0,0,0,0-26.12Zm-4.15,14.86-55.08,20.3a6,6,0,0,0-3.56,3.56l-20.3,55.08a1.92,1.92,0,0,1-3.6,0L89.9,169.66a6,6,0,0,0-3.56-3.56L31.26,145.8a1.92,1.92,0,0,1,0-3.6l55.08-20.3a6,6,0,0,0,3.56-3.56l20.3-55.08a1.92,1.92,0,0,1,3.6,0l20.3,55.08a6,6,0,0,0,3.56,3.56l55.08,20.3a1.92,1.92,0,0,1,0,3.6ZM146,40a6,6,0,0,1,6-6h18V16a6,6,0,0,1,12,0V34h18a6,6,0,0,1,0,12H182V64a6,6,0,0,1-12,0V46H152A6,6,0,0,1,146,40ZM246,88a6,6,0,0,1-6,6H230v10a6,6,0,0,1-12,0V94H208a6,6,0,0,1,0-12h10V72a6,6,0,0,1,12,0V82h10A6,6,0,0,1,246,88Z"/></g></svg>
               <span data-i18n="plugin.promptr.plan.generate">Generate the prompt</span>
             </button>
           </div>
@@ -79,7 +79,7 @@
             <button type="button" class="pr-seg-btn" data-pr-mode="source" data-i18n="plugin.promptr.prompt.source">Source</button>
           </div>
           <button type="button" class="pr-icon-btn" id="pr-copy-btn" title="Copy the prompt" aria-label="Copy the prompt" data-i18n-title="plugin.promptr.prompt.copy" data-i18n-aria-label="plugin.promptr.prompt.copy">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><rect x="9" y="9" width="11" height="11" rx="2"/><path d="M5 15V5a2 2 0 012-2h10"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,34H88a6,6,0,0,0-6,6V82H40a6,6,0,0,0-6,6V216a6,6,0,0,0,6,6H168a6,6,0,0,0,6-6V174h42a6,6,0,0,0,6-6V40A6,6,0,0,0,216,34ZM162,210H46V94H162Zm48-48H174V88a6,6,0,0,0-6-6H94V46H210Z"/></g></svg>
           </button>
         </div>
         <div class="pr-prompt-empty hidden" id="pr-prompt-empty">
@@ -90,12 +90,12 @@
         <div class="pr-prompt-preview md-body hidden" id="pr-prompt-preview"></div>
         <div class="pr-prompt-actions">
           <button type="button" class="pr-btn pr-btn-quiet" id="pr-to-plan-btn" title="The Promptr agent reads this prompt again and redoes the plan from it" data-i18n-title="plugin.promptr.prompt.toPlanTitle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 0115.5-6.2L21 8"/><path d="M21 3v5h-5"/><path d="M21 12a9 9 0 01-15.5 6.2L3 16"/><path d="M3 21v-5h5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,48V96a6,6,0,0,1-6,6H168a6,6,0,0,1,0-12h33.52L183.47,72a81.51,81.51,0,0,0-57.53-24h-.46A81.5,81.5,0,0,0,68.19,71.28a6,6,0,1,1-8.38-8.58,93.38,93.38,0,0,1,65.67-26.76H126a93.45,93.45,0,0,1,66,27.53l18,18V48a6,6,0,0,1,12,0ZM187.81,184.72a81.5,81.5,0,0,1-57.29,23.34h-.46a81.51,81.51,0,0,1-57.53-24L54.48,166H88a6,6,0,0,0,0-12H40a6,6,0,0,0-6,6v48a6,6,0,0,0,12,0V174.48l18,18.05a93.45,93.45,0,0,0,66,27.53h.52a93.38,93.38,0,0,0,65.67-26.76,6,6,0,1,0-8.38-8.58Z"/></g></svg>
             <span data-i18n="plugin.promptr.prompt.toPlan">Redo the plan from this prompt</span>
           </button>
           <span class="pr-grow"></span>
           <button type="button" class="pr-btn pr-btn-primary" id="pr-regenerate-btn">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4z"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M196.89,130.94,144.4,111.6,125.06,59.11a13.92,13.92,0,0,0-26.12,0L79.6,111.6,27.11,130.94a13.92,13.92,0,0,0,0,26.12L79.6,176.4l19.34,52.49a13.92,13.92,0,0,0,26.12,0L144.4,176.4l52.49-19.34a13.92,13.92,0,0,0,0-26.12Zm-4.15,14.86-55.08,20.3a6,6,0,0,0-3.56,3.56l-20.3,55.08a1.92,1.92,0,0,1-3.6,0L89.9,169.66a6,6,0,0,0-3.56-3.56L31.26,145.8a1.92,1.92,0,0,1,0-3.6l55.08-20.3a6,6,0,0,0,3.56-3.56l20.3-55.08a1.92,1.92,0,0,1,3.6,0l20.3,55.08a6,6,0,0,0,3.56,3.56l55.08,20.3a1.92,1.92,0,0,1,0,3.6ZM146,40a6,6,0,0,1,6-6h18V16a6,6,0,0,1,12,0V34h18a6,6,0,0,1,0,12H182V64a6,6,0,0,1-12,0V46H152A6,6,0,0,1,146,40ZM246,88a6,6,0,0,1-6,6H230v10a6,6,0,0,1-12,0V94H208a6,6,0,0,1,0-12h10V72a6,6,0,0,1,12,0V82h10A6,6,0,0,1,246,88Z"/></g></svg>
             <span id="pr-regenerate-label" data-i18n="plugin.promptr.prompt.generateFromPlan">Generate from the plan</span>
           </button>
         </div>
@@ -111,7 +111,7 @@
           <span class="pr-test-stale hidden" id="pr-test-stale" data-i18n="plugin.promptr.test.stale">The prompt has changed since this conversation began.</span>
           <span class="pr-grow"></span>
           <button type="button" class="pr-btn pr-btn-quiet" id="pr-test-restart" title="New conversation, with the current prompt" data-i18n-title="plugin.promptr.test.restartTitle">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 12a9 9 0 109-9 9.75 9.75 0 00-6.74 2.74L3 8"/><path d="M3 3v5h5"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a94,94,0,0,1-92.74,94H128a93.43,93.43,0,0,1-64.5-25.65,6,6,0,1,1,8.24-8.72A82,82,0,1,0,70,70l-.19.19L39.44,98H72a6,6,0,0,1,0,12H24a6,6,0,0,1-6-6V56a6,6,0,0,1,12,0V90.34L61.63,61.4A94,94,0,0,1,222,128Z"/></g></svg>
             <span data-i18n="plugin.promptr.test.restart">New conversation</span>
           </button>
         </div>
@@ -120,10 +120,10 @@
         <form class="pr-test-compose" id="pr-test-compose">
           <textarea id="pr-test-input" rows="2" placeholder="Write to your agent…" aria-label="Test message" data-i18n-placeholder="plugin.promptr.test.inputPlaceholder" data-i18n-aria-label="plugin.promptr.test.inputLabel"></textarea>
           <button type="submit" class="pr-send" id="pr-test-send" title="Send (Enter)" aria-label="Send" data-i18n-title="plugin.promptr.test.sendTitle" data-i18n-aria-label="plugin.promptr.test.send">
-            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M12 19V5"/><path d="M6 11l6-6 6 6"/></svg>
+            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M204.24,116.24a6,6,0,0,1-8.48,0L134,54.49V216a6,6,0,0,1-12,0V54.49L60.24,116.24a6,6,0,0,1-8.48-8.48l72-72a6,6,0,0,1,8.48,0l72,72A6,6,0,0,1,204.24,116.24Z"/></g></svg>
           </button>
           <button type="button" class="pr-send pr-stop hidden" id="pr-test-stop" title="Interrupt" aria-label="Interrupt" data-i18n-title="plugin.promptr.test.stop" data-i18n-aria-label="plugin.promptr.test.stop">
-            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><rect x="6" y="6" width="12" height="12" rx="2"/></svg>
+            <svg viewBox="0 0 24 24" fill="currentColor" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M200,42H56A14,14,0,0,0,42,56V200a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V56A14,14,0,0,0,200,42Zm2,158a2,2,0,0,1-2,2H56a2,2,0,0,1-2-2V56a2,2,0,0,1,2-2H200a2,2,0,0,1,2,2Z"/></g></svg>
           </button>
         </form>
         <p class="pr-test-note" data-i18n-html="plugin.promptr.test.noteHtml">The test bench is a real Allkin agent, <strong>with no rights at all</strong>: it puts the personality, the know-how and the instructions to the test, not the tools.</p>
@@ -149,7 +149,7 @@
         <span class="pr-modal-icon" id="pr-modal-icon" aria-hidden="true"></span>
         <h2 class="pr-modal-title" id="pr-modal-title"></h2>
         <button type="button" class="pr-icon-btn" id="pr-modal-close" title="Close" aria-label="Close" data-i18n-title="common.close" data-i18n-aria-label="common.close">
-          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><path d="M7 7l10 10M17 7L7 17"/></svg>
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" aria-hidden="true"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/></g></svg>
         </button>
       </header>
       <div class="pr-modal-body" id="pr-modal-body"></div>

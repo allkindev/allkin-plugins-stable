@@ -257,6 +257,10 @@ canal — voir `plugins/telegram-bridge/bridge.mjs`, le modèle à copier.
   dossier du plugin.
 - **Écrire seulement dans `ALLKIN_PLUGIN_DATA`.** Le dossier du plugin est remplacé à chaque mise à
   jour.
+- **Shared folder.** `ALLKIN_SHARE` (`~/.allkin/share`) is common to every agent and plugin: all
+  read, write and delete there. A plugin's own folder in it is `ALLKIN_PLUGIN_SHARE`
+  (`share/<id>`, never another name), created by the plugin if missing; agents may edit its
+  content, so it is not private state. `share/Trash/` is its bin.
 - **Dépendances npm.** Allkin copie les fichiers, il ne lance pas `npm install`. Un plugin qui en a
   besoin les installe **au démarrage**, dans `ALLKIN_PLUGIN_DATA` (voir `wetty/start.mjs`). C'est la
   seule voie pour un module natif comme `node-pty`, compilé pour la machine. Le premier démarrage est

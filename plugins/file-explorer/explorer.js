@@ -63,20 +63,20 @@ const erreur = (message) => bulle(message, "ko");
    script se reconnaissent avant même de lire le nom. Le reste tombe sur le
    document générique. */
 const FX = {
-  folder: ["#f59e0b", '<path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/>'],
-  trash: ["#94a3b8", '<path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 12a2 2 0 002 2h6a2 2 0 002-2l1-12"/><path d="M9 7V4h6v3"/>'],
-  inbox: ["#38bdf8", '<path d="M4 13l2-8h12l2 8v6H4z"/><path d="M4 13h5l1 2h4l1-2h5"/>'],
-  parent: ["#94a3b8", '<path d="M15 6l-6 6 6 6"/>'],
-  image: ["#ec4899", '<rect x="3" y="5" width="18" height="14" rx="2"/><circle cx="8.5" cy="10" r="1.5"/><path d="M21 16l-5-5-8 8"/>'],
-  video: ["#a855f7", '<rect x="3" y="6" width="13" height="12" rx="2"/><path d="M16 10l5-3v10l-5-3z"/>'],
-  audio: ["#a855f7", '<path d="M9 18V6l10-2v12"/><circle cx="6.5" cy="18" r="2.5"/><circle cx="16.5" cy="16" r="2.5"/>'],
-  pdf: ["#ef4444", '<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 17v-5h1.5a1.5 1.5 0 010 3H9"/>'],
-  archive: ["#c084fc", '<rect x="3" y="4" width="18" height="4" rx="1"/><path d="M5 8v11a1 1 0 001 1h12a1 1 0 001-1V8"/><path d="M10 12h4"/>'],
-  script: ["#22c55e", '<path d="M4 17l6-5-6-5"/><path d="M12 19h8"/>'],
-  code: ["#0ea5e9", '<path d="M8 7l-5 5 5 5"/><path d="M16 7l5 5-5 5"/><path d="M14 4l-4 16"/>'],
-  data: ["#14b8a6", '<ellipse cx="12" cy="6" rx="8" ry="3"/><path d="M4 6v12c0 1.7 3.6 3 8 3s8-1.3 8-3V6"/><path d="M4 12c0 1.7 3.6 3 8 3s8-1.3 8-3"/>'],
-  text: ["#6366f1", '<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/><path d="M9 13h6M9 17h6"/>'],
-  doc: ["#3b82f6", '<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/>'],
+  folder: ["#f59e0b", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,74H130.49l-27.9-27.9a13.94,13.94,0,0,0-9.9-4.1H40A14,14,0,0,0,26,56V200.62A13.39,13.39,0,0,0,39.38,214H216.89A13.12,13.12,0,0,0,230,200.89V88A14,14,0,0,0,216,74ZM40,54H92.69a2,2,0,0,1,1.41.59L113.51,74H38V56A2,2,0,0,1,40,54ZM218,200.89a1.11,1.11,0,0,1-1.11,1.11H39.38A1.4,1.4,0,0,1,38,200.62V86H216a2,2,0,0,1,2,2Z"/></g>'],
+  trash: ["#94a3b8", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,50H174V40a22,22,0,0,0-22-22H104A22,22,0,0,0,82,40V50H40a6,6,0,0,0,0,12H50V208a14,14,0,0,0,14,14H192a14,14,0,0,0,14-14V62h10a6,6,0,0,0,0-12ZM94,40a10,10,0,0,1,10-10h48a10,10,0,0,1,10,10V50H94ZM194,208a2,2,0,0,1-2,2H64a2,2,0,0,1-2-2V62H194ZM110,104v64a6,6,0,0,1-12,0V104a6,6,0,0,1,12,0Zm48,0v64a6,6,0,0,1-12,0V104a6,6,0,0,1,12,0Z"/></g>'],
+  inbox: ["#38bdf8", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M208,34H48A14,14,0,0,0,34,48V208a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V48A14,14,0,0,0,208,34ZM48,46H208a2,2,0,0,1,2,2V154H179.31a13.94,13.94,0,0,0-9.9,4.1L150.1,177.41a2,2,0,0,1-1.41.59H107.31a2,2,0,0,1-1.41-.58L86.59,158.1a13.94,13.94,0,0,0-9.9-4.1H46V48A2,2,0,0,1,48,46ZM208,210H48a2,2,0,0,1-2-2V166H76.69a2,2,0,0,1,1.41.58L97.41,185.9a13.94,13.94,0,0,0,9.9,4.1h41.38a13.94,13.94,0,0,0,9.9-4.1l19.31-19.31a2,2,0,0,1,1.41-.59H210v42A2,2,0,0,1,208,210Z"/></g>'],
+  parent: ["#94a3b8", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M164.24,203.76a6,6,0,1,1-8.48,8.48l-80-80a6,6,0,0,1,0-8.48l80-80a6,6,0,0,1,8.48,8.48L88.49,128Z"/></g>'],
+  image: ["#ec4899", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,42H40A14,14,0,0,0,26,56V200a14,14,0,0,0,14,14H216a14,14,0,0,0,14-14V56A14,14,0,0,0,216,42ZM40,54H216a2,2,0,0,1,2,2V163.57L188.53,134.1a14,14,0,0,0-19.8,0l-21.42,21.42L101.9,110.1a14,14,0,0,0-19.8,0L38,154.2V56A2,2,0,0,1,40,54ZM38,200V171.17l52.58-52.58a2,2,0,0,1,2.84,0L176.83,202H40A2,2,0,0,1,38,200Zm178,2H193.8l-38-38,21.41-21.42a2,2,0,0,1,2.83,0l38,38V200A2,2,0,0,1,216,202ZM146,100a10,10,0,1,1,10,10A10,10,0,0,1,146,100Z"/></g>'],
+  video: ["#a855f7", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M250.83,74.71a6,6,0,0,0-6.16.3L206,100.79V72a14,14,0,0,0-14-14H32A14,14,0,0,0,18,72V184a14,14,0,0,0,14,14H192a14,14,0,0,0,14-14V155.21L244.67,181a6,6,0,0,0,9.33-5V80A6,6,0,0,0,250.83,74.71ZM194,184a2,2,0,0,1-2,2H32a2,2,0,0,1-2-2V72a2,2,0,0,1,2-2H192a2,2,0,0,1,2,2Zm48-19.21-36-24V115.21l36-24Z"/></g>'],
+  audio: ["#a855f7", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M211.69,19.27a6,6,0,0,0-5.15-1.09l-128,32A6,6,0,0,0,74,56V170.11A34,34,0,1,0,86,196V108.68l116-29v58.43A34,34,0,1,0,214,164V24A6,6,0,0,0,211.69,19.27ZM52,218a22,22,0,1,1,22-22A22,22,0,0,1,52,218ZM86,96.32V60.68l116-29V67.32ZM180,186a22,22,0,1,1,22-22A22,22,0,0,1,180,186Z"/></g>'],
+  pdf: ["#ef4444", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,152a6,6,0,0,1-6,6H190v20h18a6,6,0,0,1,0,12H190v18a6,6,0,0,1-12,0V152a6,6,0,0,1,6-6h32A6,6,0,0,1,222,152ZM90,172a26,26,0,0,1-26,26H54v10a6,6,0,0,1-12,0V152a6,6,0,0,1,6-6H64A26,26,0,0,1,90,172Zm-12,0a14,14,0,0,0-14-14H54v28H64A14,14,0,0,0,78,172Zm84,8a34,34,0,0,1-34,34H112a6,6,0,0,1-6-6V152a6,6,0,0,1,6-6h16A34,34,0,0,1,162,180Zm-12,0a22,22,0,0,0-22-22H118v44h10A22,22,0,0,0,150,180ZM42,112V40A14,14,0,0,1,56,26h96a6,6,0,0,1,4.25,1.76l56,56A6,6,0,0,1,214,88v24a6,6,0,0,1-12,0V94H152a6,6,0,0,1-6-6V38H56a2,2,0,0,0-2,2v72a6,6,0,0,1-12,0ZM158,82h35.52L158,46.48Z"/></g>'],
+  archive: ["#c084fc", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M224,50H32A14,14,0,0,0,18,64V88a14,14,0,0,0,14,14h2v90a14,14,0,0,0,14,14H208a14,14,0,0,0,14-14V102h2a14,14,0,0,0,14-14V64A14,14,0,0,0,224,50ZM210,192a2,2,0,0,1-2,2H48a2,2,0,0,1-2-2V102H210ZM226,88a2,2,0,0,1-2,2H32a2,2,0,0,1-2-2V64a2,2,0,0,1,2-2H224a2,2,0,0,1,2,2ZM98,136a6,6,0,0,1,6-6h48a6,6,0,0,1,0,12H104A6,6,0,0,1,98,136Z"/></g>'],
+  script: ["#22c55e", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M116,132.48l-72,64a6,6,0,0,1-8-9L103,128,36,68.49a6,6,0,0,1,8-9l72,64a6,6,0,0,1,0,9ZM216,186H120a6,6,0,0,0,0,12h96a6,6,0,0,0,0-12Z"/></g>'],
+  code: ["#0ea5e9", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M67.84,92.61,25.37,128l42.47,35.39a6,6,0,1,1-7.68,9.22l-48-40a6,6,0,0,1,0-9.22l48-40a6,6,0,0,1,7.68,9.22Zm176,30.78-48-40a6,6,0,1,0-7.68,9.22L230.63,128l-42.47,35.39a6,6,0,1,0,7.68,9.22l48-40a6,6,0,0,0,0-9.22Zm-81.79-89A6,6,0,0,0,154.36,38l-64,176A6,6,0,0,0,94,221.64a6.15,6.15,0,0,0,2,.36,6,6,0,0,0,5.64-3.95l64-176A6,6,0,0,0,162.05,34.36Z"/></g>'],
+  data: ["#14b8a6", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M128,26C75.29,26,34,49.72,34,80v96c0,30.28,41.29,54,94,54s94-23.72,94-54V80C222,49.72,180.71,26,128,26Zm0,12c44.45,0,82,19.23,82,42s-37.55,42-82,42S46,102.77,46,80,83.55,38,128,38Zm82,138c0,22.77-37.55,42-82,42s-82-19.23-82-42V154.79C62,171.16,92.37,182,128,182s66-10.84,82-27.21Zm0-48c0,22.77-37.55,42-82,42s-82-19.23-82-42V106.79C62,123.16,92.37,134,128,134s66-10.84,82-27.21Z"/></g>'],
+  text: ["#6366f1", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M212.24,83.76l-56-56A6,6,0,0,0,152,26H56A14,14,0,0,0,42,40V216a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V88A6,6,0,0,0,212.24,83.76ZM158,46.48,193.52,82H158ZM200,218H56a2,2,0,0,1-2-2V40a2,2,0,0,1,2-2h90V88a6,6,0,0,0,6,6h50V216A2,2,0,0,1,200,218Zm-34-82a6,6,0,0,1-6,6H96a6,6,0,0,1,0-12h64A6,6,0,0,1,166,136Zm0,32a6,6,0,0,1-6,6H96a6,6,0,0,1,0-12h64A6,6,0,0,1,166,168Z"/></g>'],
+  doc: ["#3b82f6", '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M212.24,83.76l-56-56A6,6,0,0,0,152,26H56A14,14,0,0,0,42,40V216a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V88A6,6,0,0,0,212.24,83.76ZM158,46.48,193.52,82H158ZM200,218H56a2,2,0,0,1-2-2V40a2,2,0,0,1,2-2h90V88a6,6,0,0,0,6,6h50V216A2,2,0,0,1,200,218Z"/></g>'],
 };
 const FX_BY_EXT = {
   png: "image", jpg: "image", jpeg: "image", gif: "image", webp: "image", svg: "image", bmp: "image", heic: "image", avif: "image",
@@ -155,8 +155,16 @@ const dataViewState = {
 // confirmations en dépend, il ne doit pas mentir sur ce qui va se passer.
 const TRASH_DIR_NAME = "Trash";
 
+/** The id of the shared folder where an agent id is expected (see share.ts on
+ *  the server): the same routes, the same view. */
+const SHARE_SCOPE = "share";
+const isShare = () => dataViewState.agent?.id === SHARE_SCOPE;
+
 function openFilesTabView(tab) {
-  const agent = state.agents.find((a) => a.id === tab.agentId);
+  const agent =
+    tab.agentId === SHARE_SCOPE
+      ? { id: SHARE_SCOPE, name: t("plugin.file-explorer.share.name") }
+      : state.agents.find((a) => a.id === tab.agentId);
   if (!agent) return;
   dataViewState.agent = agent;
   loadDataPath(tab.path ?? "");
@@ -191,11 +199,105 @@ function renderDataBreadcrumb() {
   }
 }
 
+// ---- Column widths ----
+// A column is resized by dragging the right edge of its header; a double
+// click on that edge gives it back its default width. The widths are kept on
+// the device (localStorage), per table. The name takes what is left — until
+// it is given a width of its own: the empty last column then absorbs the
+// rest. The table never gets narrower than its columns plus a readable name:
+// below that, it scrolls sideways instead of crushing the name.
+const COLUMNS_KEY = "plugin.file-explorer.columns";
+const COLUMN_MIN = 56;
+const NAME_MIN = 176;
+let columnResizedAt = 0;
+
+function readColumnWidths() {
+  try {
+    const stored = JSON.parse(localStorage.getItem(COLUMNS_KEY));
+    return stored && typeof stored === "object" ? stored : {};
+  } catch {
+    return {};
+  }
+}
+
+function bindColumnResize(table, id, defaults) {
+  const rem = parseFloat(getComputedStyle(document.documentElement).fontSize) || 16;
+  const grips = [...table.querySelectorAll(".data-col-grip")];
+  const filler = table.querySelector("th[data-col-filler]");
+  const widths = () => readColumnWidths()[id] ?? {};
+  const save = (own) => {
+    const all = readColumnWidths();
+    if (Object.keys(own).length) all[id] = own;
+    else delete all[id];
+    try {
+      localStorage.setItem(COLUMNS_KEY, JSON.stringify(all));
+    } catch {
+      // Private window, storage refused: the widths last as long as the page.
+    }
+  };
+  const apply = (own) => {
+    let total = 0;
+    for (const grip of grips) {
+      const key = grip.dataset.col;
+      const width = Number(own[key]) > 0 ? Number(own[key]) : null;
+      grip.parentElement.style.width = width ? `${width}px` : "";
+      total += width ?? (defaults[key] ?? 0) * rem;
+    }
+    const nameSet = Number(own.name) > 0;
+    if (filler) filler.style.width = nameSet ? "auto" : "";
+    total += nameSet ? 0 : NAME_MIN;
+    if (filler) total += (defaults.filler ?? 0) * rem;
+    table.style.setProperty("--fx-table-min", `${Math.round(total)}px`);
+  };
+  let current = widths();
+  apply(current);
+  for (const grip of grips) {
+    const key = grip.dataset.col;
+    const th = grip.parentElement;
+    grip.addEventListener("click", (e) => e.stopPropagation());
+    grip.addEventListener("dblclick", (e) => {
+      e.stopPropagation();
+      delete current[key];
+      apply(current);
+      save(current);
+    });
+    grip.addEventListener("pointerdown", (e) => {
+      if (e.button !== 0) return;
+      e.preventDefault();
+      e.stopPropagation();
+      const startX = e.clientX;
+      const startWidth = th.getBoundingClientRect().width;
+      const min = key === "name" ? NAME_MIN : COLUMN_MIN;
+      grip.setPointerCapture(e.pointerId);
+      table.classList.add("is-resizing");
+      const onMove = (move) => {
+        current = { ...current, [key]: Math.max(min, Math.round(startWidth + move.clientX - startX)) };
+        apply(current);
+      };
+      const onUp = () => {
+        grip.removeEventListener("pointermove", onMove);
+        grip.removeEventListener("pointerup", onUp);
+        grip.removeEventListener("pointercancel", onUp);
+        table.classList.remove("is-resizing");
+        columnResizedAt = Date.now();
+        save(current);
+      };
+      grip.addEventListener("pointermove", onMove);
+      grip.addEventListener("pointerup", onUp);
+      grip.addEventListener("pointercancel", onUp);
+    });
+  }
+}
+bindColumnResize(el("data-table"), "agent", { size: 7, createdAt: 9.5, modifiedAt: 9.5, filler: 7.5 });
+bindColumnResize(el("explorer-table"), "allkin", { size: 7, date: 9 });
+
 // Contrôles de tri : en-têtes de colonnes sur grand écran, boutons de la
 // barre de tri sur mobile. Même attribut data-sort-key des deux côtés, donc
 // un seul sélecteur et une seule implémentation.
 for (const control of document.querySelectorAll("#data-view [data-sort-key]")) {
   control.addEventListener("click", () => {
+    // The end of a column drag is not a click on its header.
+    if (Date.now() - columnResizedAt < 300) return;
     const key = control.dataset.sortKey;
     if (dataViewState.sortKey === key) {
       dataViewState.sortDir *= -1;
@@ -336,7 +438,7 @@ function renderDataTable() {
     cell.innerHTML = filtre
       ? `<div class="data-empty"><strong>${t("plugin.file-explorer.empty.noMatch", { query: filtre.replace(/</g, "&lt;") })}</strong></div>`
       : `<div class="data-empty">
-           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>
+           <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.6" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true"><g class="ph-light" transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,74H130.49l-27.9-27.9a13.94,13.94,0,0,0-9.9-4.1H40A14,14,0,0,0,26,56V200.62A13.39,13.39,0,0,0,39.38,214H216.89A13.12,13.12,0,0,0,230,200.89V88A14,14,0,0,0,216,74ZM40,54H92.69a2,2,0,0,1,1.41.59L113.51,74H38V56A2,2,0,0,1,40,54ZM218,200.89a1.11,1.11,0,0,1-1.11,1.11H39.38A1.4,1.4,0,0,1,38,200.62V86H216a2,2,0,0,1,2,2Z"/></g><g class="ph-duo" transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M128,80H32V56a8,8,0,0,1,8-8H92.69a8,8,0,0,1,5.65,2.34Z" opacity="0.2"/><path d="M216,72H131.31L104,44.69A15.86,15.86,0,0,0,92.69,40H40A16,16,0,0,0,24,56V200.62A15.4,15.4,0,0,0,39.38,216H216.89A15.13,15.13,0,0,0,232,200.89V88A16,16,0,0,0,216,72ZM92.69,56l16,16H40V56ZM216,200H40V88H216Z"/></g></svg>
            <strong>${t("plugin.file-explorer.empty.title")}</strong>
            <span>${t("plugin.file-explorer.empty.hint")}</span>
          </div>`;
@@ -650,7 +752,9 @@ let profondeurGlisser = 0;
    progression. Le serveur ne sait pas dire où elle en est sans instrumenter
    `cp`, et l'opération ne bloque plus rien pendant ce temps. */
 
-const dataClipboard = { mode: null, paths: [] };
+// `agentId`: the folder the items were taken from — pasting in another one
+// (an agent's, the shared folder) copies or moves across.
+const dataClipboard = { mode: null, paths: [], agentId: null };
 let dataContextTarget = null;
 
 function closeDataContextMenu() {
@@ -753,11 +857,18 @@ function openDataContextMenu(entry, chemin, x, y, { alignRight = false } = {}) {
     plusieurs || !surUnElement || entry?.type === "dir" || !estUneArchive(entry?.name ?? "")
   );
 
+  // "Edit the image": on one image, when the image editor is installed.
+  const imageEditor = window.Allkin.capability("image-editor");
+  el("data-ctx-edit-image").classList.toggle(
+    "hidden",
+    !imageEditor || plusieurs || !surUnElement || dansCorbeille || entry?.type === "dir" || !imageEditor.canEdit(entry?.name ?? "")
+  );
+
   /* « Exécuter » suit la même règle : sur un script, un seul, et pas dans la
      corbeille — lancer ce qu'on vient de jeter n'est jamais ce qu'on voulait. */
   el("data-ctx-run").classList.toggle(
     "hidden",
-    plusieurs || !surUnElement || dansCorbeille || entry?.type === "dir" || !estUnScript(entry?.name ?? "")
+    plusieurs || !surUnElement || dansCorbeille || isShare() || entry?.type === "dir" || !estUnScript(entry?.name ?? "")
   );
 
   el("data-ctx-download-label").textContent = plusieurs ? t("plugin.file-explorer.ctx.downloadCount", { count: cibles.length }) : t("common.download");
@@ -840,6 +951,14 @@ el("data-ctx-open").addEventListener("click", () => {
   else openFileTab(dataViewState.agent.id, cible.chemin, cible.entry.name);
 });
 
+el("data-ctx-edit-image").addEventListener("click", () => {
+  const cible = dataContextTarget;
+  closeDataContextMenu();
+  const editor = window.Allkin.capability("image-editor");
+  if (!cible?.entry || !editor) return;
+  editor.openFile(dataViewState.agent.id, cible.chemin, cible.entry.name);
+});
+
 /* « Sélectionner » : entre en mode sélection avec cet élément coché. Sur
    téléphone, c'est le chemin le plus court vers une action groupée. */
 el("data-ctx-select").addEventListener("click", () => {
@@ -883,6 +1002,7 @@ for (const [id, mode] of [["data-ctx-copy", "copy"], ["data-ctx-cut", "move"]]) 
     if (cibles.length === 0) return;
     dataClipboard.mode = mode;
     dataClipboard.paths = cibles;
+    dataClipboard.agentId = dataViewState.agent?.id ?? null;
     bulle(tn(mode === "copy" ? "plugin.file-explorer.clipboard.copied" : "plugin.file-explorer.clipboard.cut", cibles.length));
   });
 }
@@ -892,24 +1012,26 @@ el("data-ctx-paste").addEventListener("click", async () => {
   const agent = dataViewState.agent;
   if (!agent || dataClipboard.paths.length === 0) return;
   const destination = dataViewState.path;
+  const fromAgent = dataClipboard.agentId ?? agent.id;
+  const sameFolder = fromAgent === agent.id;
   const erreurs = [];
   for (const source of dataClipboard.paths) {
     const nom = source.split("/").pop();
     const cible = destination ? `${destination}/${nom}` : nom;
-    if (cible === source) {
+    if (sameFolder && cible === source) {
       erreurs.push(t("plugin.file-explorer.paste.alreadyHere", { name: nom }));
       continue;
     }
     // Coller un dossier dans lui-même produirait une descente infinie : le
     // système de fichiers ne s'en protège pas, nous si.
-    if (destination === source || destination.startsWith(`${source}/`)) {
+    if (sameFolder && (destination === source || destination.startsWith(`${source}/`))) {
       erreurs.push(t("plugin.file-explorer.paste.intoItself", { name: nom }));
       continue;
     }
     try {
       await api(`/api/agents/${agent.id}/data/${dataClipboard.mode}`, {
         method: "POST",
-        body: JSON.stringify({ from: source, to: cible }),
+        body: JSON.stringify({ from: source, to: cible, ...(sameFolder ? {} : { fromAgent }) }),
       });
     } catch (err) {
       erreurs.push(`${nom} — ${err.message}`);
@@ -1783,7 +1905,7 @@ window.Allkin.registerTabKind("files", {
   icon: ICON_FOLDER,
   // L'onglet porte le nom de l'agent : avoir les fichiers de plusieurs agents
   // ouverts reste lisible, l'icône dit la nature de l'onglet.
-  label: (tab) => window.Allkin.core.agentName(tab.agentId),
+  label: (tab) => (tab.agentId === SHARE_SCOPE ? t("plugin.file-explorer.share.name") : window.Allkin.core.agentName(tab.agentId)),
   meta: t("chat.strip.files"),
   tooltip: (tab, label) => t("plugin.file-explorer.tab.files.tooltip", { name: label }),
   scroller: () => document.querySelector("#data-view .data-table-wrap"),
@@ -1928,7 +2050,7 @@ async function activateViewer(tab) {
 window.Allkin.registerTabKind("viewer", {
   panels: ["viewer-view"],
   byPath: true,
-  icon: '<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M2 12s3.5-6 10-6 10 6 10 6-3.5 6-10 6-10-6-10-6z"/><circle cx="12" cy="12" r="3"/></svg>',
+  icon: '<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#2563eb" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="ph-light" transform="scale(0.09375)" fill="#2563eb" stroke="none"><path d="M245.48,125.57c-.34-.78-8.66-19.23-27.24-37.81C201,70.54,171.38,50,128,50S55,70.54,37.76,87.76c-18.58,18.58-26.9,37-27.24,37.81a6,6,0,0,0,0,4.88c.34.77,8.66,19.22,27.24,37.8C55,185.47,84.62,206,128,206s73-20.53,90.24-37.75c18.58-18.58,26.9-37,27.24-37.8A6,6,0,0,0,245.48,125.57ZM128,194c-31.38,0-58.78-11.42-81.45-33.93A134.77,134.77,0,0,1,22.69,128,134.56,134.56,0,0,1,46.55,95.94C69.22,73.42,96.62,62,128,62s58.78,11.42,81.45,33.94A134.56,134.56,0,0,1,233.31,128C226.94,140.21,195,194,128,194Zm0-112a46,46,0,1,0,46,46A46.06,46.06,0,0,0,128,82Zm0,80a34,34,0,1,1,34-34A34,34,0,0,1,128,162Z"/></g><g class="ph-duo" transform="scale(0.09375)" fill="#2563eb" stroke="none"><path d="M128,56C48,56,16,128,16,128s32,72,112,72,112-72,112-72S208,56,128,56Zm0,112a40,40,0,1,1,40-40A40,40,0,0,1,128,168Z" opacity="0.2"/><path d="M247.31,124.76c-.35-.79-8.82-19.58-27.65-38.41C194.57,61.26,162.88,48,128,48S61.43,61.26,36.34,86.35C17.51,105.18,9,124,8.69,124.76a8,8,0,0,0,0,6.5c.35.79,8.82,19.57,27.65,38.4C61.43,194.74,93.12,208,128,208s66.57-13.26,91.66-38.34c18.83-18.83,27.3-37.61,27.65-38.4A8,8,0,0,0,247.31,124.76ZM128,192c-30.78,0-57.67-11.19-79.93-33.25A133.47,133.47,0,0,1,25,128,133.33,133.33,0,0,1,48.07,97.25C70.33,75.19,97.22,64,128,64s57.67,11.19,79.93,33.25A133.46,133.46,0,0,1,231.05,128C223.84,141.46,192.43,192,128,192Zm0-112a48,48,0,1,0,48,48A48.05,48.05,0,0,0,128,80Zm0,80a32,32,0,1,1,32-32A32,32,0,0,1,128,160Z"/></g></svg>',
   label: (tab) => tab.name || tab.path.split("/").pop(),
   meta: t("plugin.file-explorer.tab.viewer.meta"),
   tooltip: (tab) => tab.path,
@@ -1938,14 +2060,28 @@ window.Allkin.registerTabKind("viewer", {
 
 window.Allkin.registerTabKind("explorer", {
   panels: ["explorer-view"],
-  icon: '<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M3 7a2 2 0 012-2h4l2 2h8a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2z"/></svg>',
+  icon: '<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#f59e0b" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g class="ph-light" transform="scale(0.09375)" fill="#f59e0b" stroke="none"><path d="M216,74H130.49l-27.9-27.9a13.94,13.94,0,0,0-9.9-4.1H40A14,14,0,0,0,26,56V200.62A13.39,13.39,0,0,0,39.38,214H216.89A13.12,13.12,0,0,0,230,200.89V88A14,14,0,0,0,216,74ZM40,54H92.69a2,2,0,0,1,1.41.59L113.51,74H38V56A2,2,0,0,1,40,54ZM218,200.89a1.11,1.11,0,0,1-1.11,1.11H39.38A1.4,1.4,0,0,1,38,200.62V86H216a2,2,0,0,1,2,2Z"/></g><g class="ph-duo" transform="scale(0.09375)" fill="#f59e0b" stroke="none"><path d="M128,80H32V56a8,8,0,0,1,8-8H92.69a8,8,0,0,1,5.65,2.34Z" opacity="0.2"/><path d="M216,72H131.31L104,44.69A15.86,15.86,0,0,0,92.69,40H40A16,16,0,0,0,24,56V200.62A15.4,15.4,0,0,0,39.38,216H216.89A15.13,15.13,0,0,0,232,200.89V88A16,16,0,0,0,216,72ZM92.69,56l16,16H40V56ZM216,200H40V88H216Z"/></g></svg>',
   label: () => t("tabs.group.explorer"),
   scroller: () => document.querySelector("#explorer-view .explorer-table-wrap"),
   activate: (tab) => loadExplorerPath(tab.path ?? ""),
 });
 
+// The shared folder has its entry in the Plugins list of the Allkin menu.
+window.Allkin.registerApp({
+  key: "share",
+  get name() {
+    return t("plugin.file-explorer.share.name");
+  },
+  get meta() {
+    return t("plugin.file-explorer.share.meta");
+  },
+  icon: ICON_FOLDER,
+  open: () => openTab(SHARE_SCOPE, "files"),
+});
+
 window.Allkin.provide("file-explorer", {
   openAgentFiles: (agentId) => openTab(agentId, "files"),
+  openShare: () => openTab(SHARE_SCOPE, "files"),
   openAllkinExplorer: () => openTab(null, "explorer"),
 });
 

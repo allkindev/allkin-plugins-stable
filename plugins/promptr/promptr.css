@@ -613,3 +613,21 @@ button.pr-pick:disabled { opacity: 0.45; cursor: default; }
   .pr-modal, .pr-modal-backdrop, .pr-busy { animation: none; }
   .pr-spinner { animation-duration: 2s; }
 }
+
+/* The prompt takes the width of the page, whatever the size of the screen: no
+   margin, no frame on its sides. data-edit-zone="reduced" on it (or around
+   it) keeps the framed drawing. */
+.pr-pane { --pr-gutter: var(--sp-5); }
+@media (max-width: 720px) { .pr-pane { --pr-gutter: var(--sp-3); } }
+:is(.pr-prompt-source, .pr-prompt-preview):not([data-edit-zone="reduced"], [data-edit-zone="reduced"] *) {
+  width: calc(100% + 2 * var(--pr-gutter));
+  max-width: none;
+  margin-left: calc(-1 * var(--pr-gutter));
+  margin-right: calc(-1 * var(--pr-gutter));
+  border-left: 0;
+  border-right: 0;
+  border-radius: 0;
+}
+/* The pane no longer holds a column: only what surrounds the prompt does. */
+#pr-pane-prompt:not(.hidden) { max-width: none; margin: 0; }
+#pr-pane-prompt > :not(.pr-prompt-source):not(.pr-prompt-preview) { align-self: center; width: 100%; max-width: 50rem; }

@@ -29,8 +29,19 @@ Die Ordner-Schaltfläche in der Zeile eines Agenten öffnet seinen Bereich `data
 - **Ausführen von `.sh`-Skripten**, nachdem ihr Inhalt gelesen wurde, mit der Ausgabe live;
 - **Papierkorb**: Gelöschtes wandert nach `Trash/`, das sich separat leeren lässt.
 
+Mit dem Plugin *Bildeditor* bietet das Kontextmenü eines Bildes **Bild bearbeiten** an.
+
 Ein Klick auf eine Datei öffnet sie im Plugin *Texteditor*, wenn es installiert ist, und lädt sie
 sonst herunter.
+
+## Freigegebener Ordner
+
+In der Plugin-Liste des Allkin-Menüs öffnet **Freigegebener Ordner** `~/.allkin/share`, gemeinsam
+für alle Agenten und alle Plugins: Alle lesen, schreiben, ergänzen und löschen dort. Dieselbe Seite
+wie die Dateien eines Agenten, ohne Ausführen von Skripten. Ein Ordner mit dem Namen eines
+installierten Plugins gehört diesem: Sein Inhalt kann sich ändern, der Ordner selbst bleibt.
+Kopieren oder Ausschneiden in den Dateien eines Agenten und Einfügen im freigegebenen Ordner (oder
+umgekehrt) wechselt von einem zum anderen.
 
 ## Explorer von `~/.allkin`
 

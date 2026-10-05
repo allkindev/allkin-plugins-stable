@@ -29,8 +29,18 @@ El botón de carpeta en la fila de un agente abre su espacio `data/`:
 - **ejecución de scripts** `.sh`, tras leer su contenido, con la salida en directo;
 - **papelera**: lo que se elimina va a `Trash/`, que se puede vaciar aparte.
 
+Con el plugin *Editor de imágenes*, el menú contextual de una imagen ofrece **Editar la imagen**.
+
 Un clic en un archivo lo abre en el plugin *Editor de texto* si está instalado, y lo descarga si
 no.
+
+## Carpeta compartida
+
+En la lista Plugins del menú de Allkin, **Carpeta compartida** abre `~/.allkin/share`, común a
+todos los agentes y todos los plugins: todos leen, escriben, añaden y eliminan allí. La misma
+página que los archivos de un agente, sin ejecución de scripts. Una carpeta con el nombre de un
+plugin instalado es suya: su contenido puede cambiar, la carpeta en sí se queda. Copiar o cortar
+en los archivos de un agente y pegar en la carpeta compartida (o al revés) pasa de uno a otro.
 
 ## Explorador de `~/.allkin`
 

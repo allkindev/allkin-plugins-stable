@@ -1,6 +1,6 @@
 {
   "name": "Éditeur de texte",
-  "version": "1.0.4",
+  "version": "1.0.7",
   "description": "Ouvre les fichiers des agents dans un onglet : éditeur de code (80 langages colorés, numéros de ligne, recherche/remplacement, commentaires, indentation), aperçu markdown, images et PDF.",
   "author": "Allkin",
   "permissions": [

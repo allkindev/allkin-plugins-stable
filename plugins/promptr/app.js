@@ -39,9 +39,9 @@ const STORE_UI = "promptr.ui";
 const STORE_BENCH = "promptr.bench";
 const BENCH_NAME = "Promptr essai";
 
-const LOGO_PATHS = '<rect x="3" y="3" width="8" height="5" rx="1.5"/><rect x="13" y="10" width="8" height="5" rx="1.5"/><rect x="3" y="16" width="8" height="5" rx="1.5"/><path d="M7 8v8"/><path d="M11 12.5h2"/>';
+const LOGO_PATHS = '<g class="ph-light" transform="scale(0.09375)" fill="#a78bfa" stroke="none"><path d="M160,110h48a14,14,0,0,0,14-14V48a14,14,0,0,0-14-14H160a14,14,0,0,0-14,14V66H128a22,22,0,0,0-22,22v34H70V112A14,14,0,0,0,56,98H24a14,14,0,0,0-14,14v32a14,14,0,0,0,14,14H56a14,14,0,0,0,14-14V134h36v34a22,22,0,0,0,22,22h18v18a14,14,0,0,0,14,14h48a14,14,0,0,0,14-14V160a14,14,0,0,0-14-14H160a14,14,0,0,0-14,14v18H128a10,10,0,0,1-10-10V88a10,10,0,0,1,10-10h18V96A14,14,0,0,0,160,110ZM58,144a2,2,0,0,1-2,2H24a2,2,0,0,1-2-2V112a2,2,0,0,1,2-2H56a2,2,0,0,1,2,2Zm100,16a2,2,0,0,1,2-2h48a2,2,0,0,1,2,2v48a2,2,0,0,1-2,2H160a2,2,0,0,1-2-2Zm0-112a2,2,0,0,1,2-2h48a2,2,0,0,1,2,2V96a2,2,0,0,1-2,2H160a2,2,0,0,1-2-2Z"/></g><g class="ph-duo" transform="scale(0.09375)" fill="#a78bfa" stroke="none"><path d="M64,112v32a8,8,0,0,1-8,8H24a8,8,0,0,1-8-8V112a8,8,0,0,1,8-8H56A8,8,0,0,1,64,112ZM208,40H160a8,8,0,0,0-8,8V96a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V48A8,8,0,0,0,208,40Zm0,112H160a8,8,0,0,0-8,8v48a8,8,0,0,0,8,8h48a8,8,0,0,0,8-8V160A8,8,0,0,0,208,152Z" opacity="0.2"/><path d="M160,112h48a16,16,0,0,0,16-16V48a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16V64H128a24,24,0,0,0-24,24v32H72v-8A16,16,0,0,0,56,96H24A16,16,0,0,0,8,112v32a16,16,0,0,0,16,16H56a16,16,0,0,0,16-16v-8h32v32a24,24,0,0,0,24,24h16v16a16,16,0,0,0,16,16h48a16,16,0,0,0,16-16V160a16,16,0,0,0-16-16H160a16,16,0,0,0-16,16v16H128a8,8,0,0,1-8-8V88a8,8,0,0,1,8-8h16V96A16,16,0,0,0,160,112ZM56,144H24V112H56v32Zm104,16h48v48H160Zm0-112h48V96H160Z"/></g>';
 const ICON = `<svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#a78bfa" stroke-width="2" stroke-linecap="round" stroke-linejoin="round">${LOGO_PATHS}</svg>`;
-const SPARK = '<path d="M12 3l1.9 4.6L18.5 9l-4.6 1.9L12 15.5l-1.9-4.6L5.5 9l4.6-1.4z"/>';
+const SPARK = '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M196.89,130.94,144.4,111.6,125.06,59.11a13.92,13.92,0,0,0-26.12,0L79.6,111.6,27.11,130.94a13.92,13.92,0,0,0,0,26.12L79.6,176.4l19.34,52.49a13.92,13.92,0,0,0,26.12,0L144.4,176.4l52.49-19.34a13.92,13.92,0,0,0,0-26.12Zm-4.15,14.86-55.08,20.3a6,6,0,0,0-3.56,3.56l-20.3,55.08a1.92,1.92,0,0,1-3.6,0L89.9,169.66a6,6,0,0,0-3.56-3.56L31.26,145.8a1.92,1.92,0,0,1,0-3.6l55.08-20.3a6,6,0,0,0,3.56-3.56l20.3-55.08a1.92,1.92,0,0,1,3.6,0l20.3,55.08a6,6,0,0,0,3.56,3.56l55.08,20.3a1.92,1.92,0,0,1,0,3.6ZM146,40a6,6,0,0,1,6-6h18V16a6,6,0,0,1,12,0V34h18a6,6,0,0,1,0,12H182V64a6,6,0,0,1-12,0V46H152A6,6,0,0,1,146,40ZM246,88a6,6,0,0,1-6,6H230v10a6,6,0,0,1-12,0V94H208a6,6,0,0,1,0-12h10V72a6,6,0,0,1,12,0V82h10A6,6,0,0,1,246,88Z"/></g>';
 
 function toast(message, kind = "ok") {
   if (typeof Allkin.core.toast === "function") Allkin.core.toast(message, kind);
@@ -346,7 +346,7 @@ function renderPlan() {
   const addBtn = document.createElement("button");
   addBtn.type = "button";
   addBtn.className = "pr-add-block";
-  addBtn.innerHTML = `${svg('<path d="M12 5v14M5 12h14"/>')}<span>${escapeHtml(plan.blocks.length ? Allkin.t("plugin.promptr.plan.addBlock") : Allkin.t("plugin.promptr.plan.addFirstBlock"))}</span>`;
+  addBtn.innerHTML = `${svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></g>')}<span>${escapeHtml(plan.blocks.length ? Allkin.t("plugin.promptr.plan.addBlock") : Allkin.t("plugin.promptr.plan.addFirstBlock"))}</span>`;
   addBtn.addEventListener("click", () => openBlockPicker(plan.blocks.length));
   add.appendChild(addBtn);
   flow.appendChild(add);
@@ -373,7 +373,7 @@ function insertPoint(index) {
   btn.className = "pr-insert-btn";
   btn.title = Allkin.t("plugin.promptr.plan.insertHere");
   btn.setAttribute("aria-label", Allkin.t("plugin.promptr.plan.insertHere"));
-  btn.innerHTML = svg('<path d="M12 5v14M5 12h14"/>', 'stroke-width="2.6"');
+  btn.innerHTML = svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></g>', 'stroke-width="2.6"');
   btn.addEventListener("click", () => openBlockPicker(index));
   li.appendChild(btn);
   li.addEventListener("dragover", (e) => {
@@ -403,7 +403,7 @@ function blockNode(block, index) {
   card.className = `pr-card${empty ? " is-empty" : ""}`;
   card.style.setProperty("--block", def.color);
   card.innerHTML = `
-    <span class="pr-card-grip" title="${escapeHtml(Allkin.t("plugin.promptr.card.grip"))}" aria-hidden="true">${svg('<circle cx="9" cy="6" r="1"/><circle cx="15" cy="6" r="1"/><circle cx="9" cy="12" r="1"/><circle cx="15" cy="12" r="1"/><circle cx="9" cy="18" r="1"/><circle cx="15" cy="18" r="1"/>', 'fill="currentColor"')}</span>
+    <span class="pr-card-grip" title="${escapeHtml(Allkin.t("plugin.promptr.card.grip"))}" aria-hidden="true">${svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M102,60A10,10,0,1,1,92,50,10,10,0,0,1,102,60Zm62,10a10,10,0,1,0-10-10A10,10,0,0,0,164,70ZM92,118a10,10,0,1,0,10,10A10,10,0,0,0,92,118Zm72,0a10,10,0,1,0,10,10A10,10,0,0,0,164,118ZM92,186a10,10,0,1,0,10,10A10,10,0,0,0,92,186Zm72,0a10,10,0,1,0,10,10A10,10,0,0,0,164,186Z"/></g>', 'fill="currentColor"')}</span>
     <button type="button" class="pr-card-main">
       ${blockIcon(block.type)}
       <span class="pr-card-text">
@@ -412,9 +412,9 @@ function blockNode(block, index) {
       </span>
     </button>
     <span class="pr-card-actions">
-      <button type="button" class="pr-icon-btn" data-act="up" title="${escapeHtml(Allkin.t("plugin.promptr.card.up"))}" aria-label="${escapeHtml(Allkin.t("plugin.promptr.card.up"))}"${index === 0 ? " disabled" : ""}>${svg('<path d="M6 15l6-6 6 6"/>')}</button>
-      <button type="button" class="pr-icon-btn" data-act="down" title="${escapeHtml(Allkin.t("plugin.promptr.card.down"))}" aria-label="${escapeHtml(Allkin.t("plugin.promptr.card.down"))}"${index === plan.blocks.length - 1 ? " disabled" : ""}>${svg('<path d="M6 9l6 6 6-6"/>')}</button>
-      <button type="button" class="pr-icon-btn pr-danger" data-act="delete" title="${escapeHtml(Allkin.t("plugin.promptr.card.remove"))}" aria-label="${escapeHtml(Allkin.t("plugin.promptr.card.remove"))}">${svg('<path d="M4 7h16"/><path d="M10 11v6M14 11v6"/><path d="M6 7l1 12a2 2 0 002 2h6a2 2 0 002-2l1-12"/><path d="M9 7V4h6v3"/>')}</button>
+      <button type="button" class="pr-icon-btn" data-act="up" title="${escapeHtml(Allkin.t("plugin.promptr.card.up"))}" aria-label="${escapeHtml(Allkin.t("plugin.promptr.card.up"))}"${index === 0 ? " disabled" : ""}>${svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M212.24,164.24a6,6,0,0,1-8.48,0L128,88.49,52.24,164.24a6,6,0,0,1-8.48-8.48l80-80a6,6,0,0,1,8.48,0l80,80A6,6,0,0,1,212.24,164.24Z"/></g>')}</button>
+      <button type="button" class="pr-icon-btn" data-act="down" title="${escapeHtml(Allkin.t("plugin.promptr.card.down"))}" aria-label="${escapeHtml(Allkin.t("plugin.promptr.card.down"))}"${index === plan.blocks.length - 1 ? " disabled" : ""}>${svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M212.24,100.24l-80,80a6,6,0,0,1-8.48,0l-80-80a6,6,0,0,1,8.48-8.48L128,167.51l75.76-75.75a6,6,0,0,1,8.48,8.48Z"/></g>')}</button>
+      <button type="button" class="pr-icon-btn pr-danger" data-act="delete" title="${escapeHtml(Allkin.t("plugin.promptr.card.remove"))}" aria-label="${escapeHtml(Allkin.t("plugin.promptr.card.remove"))}">${svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,50H174V40a22,22,0,0,0-22-22H104A22,22,0,0,0,82,40V50H40a6,6,0,0,0,0,12H50V208a14,14,0,0,0,14,14H192a14,14,0,0,0,14-14V62h10a6,6,0,0,0,0-12ZM94,40a10,10,0,0,1,10-10h48a10,10,0,0,1,10,10V50H94ZM194,208a2,2,0,0,1-2,2H64a2,2,0,0,1-2-2V62H194ZM110,104v64a6,6,0,0,1-12,0V104a6,6,0,0,1,12,0Zm48,0v64a6,6,0,0,1-12,0V104a6,6,0,0,1,12,0Z"/></g>')}</button>
     </span>`;
   card.querySelector(".pr-card-main").addEventListener("click", () => openBlockEditor(block));
   card.querySelector('[data-act="up"]').addEventListener("click", () => moveBlockTo(block.id, index - 1));
@@ -556,7 +556,7 @@ function openBlockPicker(index) {
     });
     grid.appendChild(pick);
   }
-  openModal({ title: Allkin.t("plugin.promptr.picker.title"), icon: svg('<path d="M12 5v14M5 12h14"/>'), body: grid, wide: true });
+  openModal({ title: Allkin.t("plugin.promptr.picker.title"), icon: svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></g>'), body: grid, wide: true });
 }
 
 /* ---- Régler un bloc -------------------------------------------------------------- */
@@ -670,7 +670,7 @@ function blockForm(block) {
         del.className = "pr-icon-btn";
         del.title = Allkin.t("common.remove");
         del.setAttribute("aria-label", Allkin.t("common.remove"));
-        del.innerHTML = svg('<path d="M7 7l10 10M17 7L7 17"/>');
+        del.innerHTML = svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M204.24,195.76a6,6,0,1,1-8.48,8.48L128,136.49,60.24,204.24a6,6,0,0,1-8.48-8.48L119.51,128,51.76,60.24a6,6,0,0,1,8.48-8.48L128,119.51l67.76-67.75a6,6,0,0,1,8.48,8.48L136.49,128Z"/></g>');
         del.addEventListener("click", () => r.remove());
         r.append(a, b, del);
         list.appendChild(r);
@@ -681,7 +681,7 @@ function blockForm(block) {
       };
       // The wording of the button comes with the field (blocks.js).
       const add = button(field.addLabel, {
-        icon: svg('<path d="M12 5v14M5 12h14"/>'),
+        icon: svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a6,6,0,0,1-6,6H134v82a6,6,0,0,1-12,0V134H40a6,6,0,0,1,0-12h82V40a6,6,0,0,1,12,0v82h82A6,6,0,0,1,222,128Z"/></g>'),
         onClick: () => addRow(),
       });
       add.classList.add("pr-pairs-add");
@@ -845,7 +845,7 @@ async function openImportModal() {
     </div>
     <div class="pr-import-pane hidden" data-pane="file">
       <label class="pr-drop">
-        ${svg('<path d="M12 16V4m0 0l-4 4m4-4l4 4"/><path d="M4 16v3a2 2 0 002 2h12a2 2 0 002-2v-3"/>')}
+        ${svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,144v64a6,6,0,0,1-6,6H40a6,6,0,0,1-6-6V144a6,6,0,0,1,12,0v58H210V144a6,6,0,0,1,12,0ZM92.24,76.24,122,46.49V144a6,6,0,0,0,12,0V46.49l29.76,29.75a6,6,0,0,0,8.48-8.48l-40-40a6,6,0,0,0-8.48,0l-40,40a6,6,0,0,0,8.48,8.48Z"/></g>')}
         <strong>${escapeHtml(Allkin.t("plugin.promptr.import.chooseFile"))}</strong>
         <span>${escapeHtml(Allkin.t("plugin.promptr.import.fileHint"))}</span>
         <input type="file" accept=".md,.txt,.markdown,.allkin,.zip,.json" hidden />
@@ -913,7 +913,7 @@ async function openImportModal() {
   }
   openModal({
     title: Allkin.t("plugin.promptr.import.title"),
-    icon: svg('<path d="M6 3h8l5 5v13H6z"/><path d="M14 3v5h5"/>'),
+    icon: svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M212.24,83.76l-56-56A6,6,0,0,0,152,26H56A14,14,0,0,0,42,40V216a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V88A6,6,0,0,0,212.24,83.76ZM158,46.48,193.52,82H158ZM200,218H56a2,2,0,0,1-2-2V40a2,2,0,0,1,2-2h90V88a6,6,0,0,0,6,6h50V216A2,2,0,0,1,200,218Z"/></g>'),
     body,
     wide: true,
     foot: [spacer(), button(Allkin.t("common.cancel"), { onClick: closeModal }), go],
@@ -1374,7 +1374,7 @@ function openDeployModal() {
   });
   openModal({
     title: Allkin.t("plugin.promptr.deploy.title"),
-    icon: svg('<path d="M5 13l4 4L19 7"/>'),
+    icon: svg('<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M228.24,76.24l-128,128a6,6,0,0,1-8.48,0l-56-56a6,6,0,0,1,8.48-8.48L96,191.51,219.76,67.76a6,6,0,0,1,8.48,8.48Z"/></g>'),
     color: "#10b981",
     body,
     foot: [spacer(), button(Allkin.t("common.cancel"), { onClick: closeModal }), go],

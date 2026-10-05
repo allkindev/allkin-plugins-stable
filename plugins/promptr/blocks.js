@@ -31,7 +31,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.role.label"),
     hint: t("plugin.promptr.block.role.hint"),
     color: "#8b5cf6",
-    icon: '<circle cx="12" cy="8" r="4"/><path d="M4 20c0-3.5 3.6-6 8-6s8 2.5 8 6"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M229.19,213c-15.81-27.32-40.63-46.49-69.47-54.62a70,70,0,1,0-63.44,0C67.44,166.5,42.62,185.67,26.81,213a6,6,0,1,0,10.38,6C56.4,185.81,90.34,166,128,166s71.6,19.81,90.81,53a6,6,0,1,0,10.38-6ZM70,96a58,58,0,1,1,58,58A58.07,58.07,0,0,1,70,96Z"/></g>',
     fields: [
       { key: "role", label: t("plugin.promptr.block.role.field.role.label"), kind: "text", placeholder: t("plugin.promptr.block.role.field.role.placeholder") },
       { key: "mission", label: t("plugin.promptr.block.role.field.mission.label"), kind: "textarea", placeholder: t("plugin.promptr.block.role.field.mission.placeholder") },
@@ -42,7 +42,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.personality.label"),
     hint: t("plugin.promptr.block.personality.hint"),
     color: "#ec4899",
-    icon: '<circle cx="12" cy="12" r="9"/><path d="M8.5 14.5c.9 1.2 2.1 1.8 3.5 1.8s2.6-.6 3.5-1.8"/><circle cx="9" cy="10" r=".8" fill="currentColor"/><circle cx="15" cy="10" r=".8" fill="currentColor"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M173.19,155c-9.92,17.16-26.39,27-45.19,27s-35.27-9.84-45.19-27a6,6,0,0,1,10.38-6c7.84,13.54,20.2,21,34.81,21s27-7.46,34.81-21a6,6,0,1,1,10.38,6ZM230,128A102,102,0,1,1,128,26,102.12,102.12,0,0,1,230,128Zm-12,0a90,90,0,1,0-90,90A90.1,90.1,0,0,0,218,128ZM92,118a10,10,0,1,0-10-10A10,10,0,0,0,92,118Zm72-20a10,10,0,1,0,10,10A10,10,0,0,0,164,98Z"/></g>',
     fields: [
       {
         key: "tone",
@@ -65,7 +65,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.skills.label"),
     hint: t("plugin.promptr.block.skills.hint"),
     color: "#f59e0b",
-    icon: '<path d="M12 3l2.6 5.3 5.9.9-4.3 4.1 1 5.8L12 16.4 6.8 19.1l1-5.8L3.5 9.2l5.9-.9z"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M237.28,97.87A14.18,14.18,0,0,0,224.76,88l-60.25-4.87-23.22-56.2a14.37,14.37,0,0,0-26.58,0L91.49,83.11,31.24,88a14.18,14.18,0,0,0-12.52,9.89A14.43,14.43,0,0,0,23,113.32L69,152.93l-14,59.25a14.4,14.4,0,0,0,5.59,15,14.1,14.1,0,0,0,15.91.6L128,196.12l51.58,31.71a14.1,14.1,0,0,0,15.91-.6,14.4,14.4,0,0,0,5.59-15l-14-59.25L233,113.32A14.43,14.43,0,0,0,237.28,97.87Zm-12.14,6.37-48.69,42a6,6,0,0,0-1.92,5.92l14.88,62.79a2.35,2.35,0,0,1-.95,2.57,2.24,2.24,0,0,1-2.6.1L131.14,184a6,6,0,0,0-6.28,0L70.14,217.61a2.24,2.24,0,0,1-2.6-.1,2.35,2.35,0,0,1-1-2.57l14.88-62.79a6,6,0,0,0-1.92-5.92l-48.69-42a2.37,2.37,0,0,1-.73-2.65,2.28,2.28,0,0,1,2.07-1.65l63.92-5.16a6,6,0,0,0,5.06-3.69l24.63-59.6a2.35,2.35,0,0,1,4.38,0l24.63,59.6a6,6,0,0,0,5.06,3.69l63.92,5.16a2.28,2.28,0,0,1,2.07,1.65A2.37,2.37,0,0,1,225.14,104.24Z"/></g>',
     fields: [
       {
         key: "level",
@@ -80,7 +80,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.knowledge.label"),
     hint: t("plugin.promptr.block.knowledge.hint"),
     color: "#0ea5e9",
-    icon: '<path d="M4 19.5A2.5 2.5 0 016.5 17H20"/><path d="M6.5 2H20v20H6.5A2.5 2.5 0 014 19.5v-15A2.5 2.5 0 016.5 2z"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M208,26H72A30,30,0,0,0,42,56V224a6,6,0,0,0,6,6H192a6,6,0,0,0,0-12H54v-2a18,18,0,0,1,18-18H208a6,6,0,0,0,6-6V32A6,6,0,0,0,208,26Zm-6,160H72a29.87,29.87,0,0,0-18,6V56A18,18,0,0,1,72,38H202Z"/></g>',
     fields: [
       { key: "domains", label: t("plugin.promptr.block.knowledge.field.domains.label"), kind: "list", placeholder: t("plugin.promptr.block.knowledge.field.domains.placeholder") },
       { key: "context", label: t("plugin.promptr.block.knowledge.field.context.label"), kind: "textarea", placeholder: t("plugin.promptr.block.knowledge.field.context.placeholder") },
@@ -92,7 +92,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.method.label"),
     hint: t("plugin.promptr.block.method.hint"),
     color: "#10b981",
-    icon: '<path d="M9 6h11M9 12h11M9 18h11"/><path d="M4 6l1 1 2-2M4 12l1 1 2-2M4 18l1 1 2-2"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M222,128a6,6,0,0,1-6,6H128a6,6,0,0,1,0-12h88A6,6,0,0,1,222,128ZM128,70h88a6,6,0,0,0,0-12H128a6,6,0,0,0,0,12Zm88,116H128a6,6,0,0,0,0,12h88a6,6,0,0,0,0-12ZM83.76,43.76,56,71.51,44.24,59.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48,0l32-32a6,6,0,0,0-8.48-8.48Zm0,64L56,135.51,44.24,123.76a6,6,0,1,0-8.48,8.48l16,16a6,6,0,0,0,8.48,0l32-32a6,6,0,0,0-8.48-8.48Zm0,64L56,199.51,44.24,187.76a6,6,0,0,0-8.48,8.48l16,16a6,6,0,0,0,8.48,0l32-32a6,6,0,0,0-8.48-8.48Z"/></g>',
     fields: [
       { key: "steps", label: t("plugin.promptr.block.method.field.steps.label"), kind: "list", placeholder: t("plugin.promptr.block.method.field.steps.placeholder") },
       {
@@ -109,7 +109,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.format.label"),
     hint: t("plugin.promptr.block.format.hint"),
     color: "#6366f1",
-    icon: '<path d="M4 6h16M4 12h10M4 18h14"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M34,64a6,6,0,0,1,6-6H216a6,6,0,0,1,0,12H40A6,6,0,0,1,34,64Zm6,46H168a6,6,0,0,0,0-12H40a6,6,0,0,0,0,12Zm176,28H40a6,6,0,0,0,0,12H216a6,6,0,0,0,0-12Zm-48,40H40a6,6,0,0,0,0,12H168a6,6,0,0,0,0-12Z"/></g>',
     fields: [
       { key: "language", label: t("plugin.promptr.block.format.field.language.label"), kind: "text", placeholder: t("plugin.promptr.block.format.field.language.placeholder") },
       {
@@ -137,7 +137,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.scope.label"),
     hint: t("plugin.promptr.block.scope.hint"),
     color: "#ef4444",
-    icon: '<path d="M12 3l7 3v5c0 4.5-3 8.4-7 10-4-1.6-7-5.5-7-10V6z"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M208,42H48A14,14,0,0,0,34,56v56c0,51.94,25.12,83.4,46.2,100.64,22.73,18.6,45.27,24.89,46.22,25.15a6,6,0,0,0,3.16,0c.95-.26,23.49-6.55,46.22-25.15C196.88,195.4,222,163.94,222,112V56A14,14,0,0,0,208,42Zm2,70c0,37.76-13.94,68.39-41.44,91.06A131.17,131.17,0,0,1,128,225.72a130.94,130.94,0,0,1-40.56-22.66C59.94,180.39,46,149.76,46,112V56a2,2,0,0,1,2-2H208a2,2,0,0,1,2,2Z"/></g>',
     fields: [
       { key: "inScope", label: t("plugin.promptr.block.scope.field.inScope.label"), kind: "list", placeholder: t("plugin.promptr.block.scope.field.inScope.placeholder") },
       { key: "outOfScope", label: t("plugin.promptr.block.scope.field.outOfScope.label"), kind: "list", placeholder: t("plugin.promptr.block.scope.field.outOfScope.placeholder") },
@@ -149,7 +149,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.examples.label"),
     hint: t("plugin.promptr.block.examples.hint"),
     color: "#14b8a6",
-    icon: '<path d="M21 12a8 8 0 01-8 8H7l-4 3V12a8 8 0 018-8h2a8 8 0 018 8z"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M128,26A102,102,0,0,0,38.35,176.69L26.73,211.56a14,14,0,0,0,17.71,17.71l34.87-11.62A102,102,0,1,0,128,26Zm0,192a90,90,0,0,1-45.06-12.08,6.09,6.09,0,0,0-3-.81,6.2,6.2,0,0,0-1.9.31L40.65,217.88a2,2,0,0,1-2.53-2.53L50.58,178a6,6,0,0,0-.5-4.91A90,90,0,1,1,128,218Z"/></g>',
     fields: [
       { key: "items", label: t("plugin.promptr.block.examples.field.items.label"), kind: "pairs", pair: [t("plugin.promptr.block.examples.field.items.a"), t("plugin.promptr.block.examples.field.items.b")],
         addLabel: t("plugin.promptr.block.examples.field.items.add"), countKey: "plugin.promptr.block.examples.field.items.count", long: true },
@@ -159,7 +159,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.greeting.label"),
     hint: t("plugin.promptr.block.greeting.hint"),
     color: "#84cc16",
-    icon: '<path d="M7 11V7a2 2 0 114 0v4"/><path d="M11 10V5a2 2 0 114 0v6"/><path d="M15 10a2 2 0 114 0v3a8 8 0 01-8 8h-1a6 6 0 01-5-2.7L3 15a2 2 0 013-2.6l1 1.1"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M188,50a25.8,25.8,0,0,0-14,4.11V44a26,26,0,0,0-51.41-5.51A26,26,0,0,0,82,60v71l-7.53-12.1a26,26,0,0,0-45.11,25.87C60.76,211,78.51,238,128,238a86.1,86.1,0,0,0,86-86V76A26,26,0,0,0,188,50Zm14,102a74.09,74.09,0,0,1-74,74c-21,0-34.51-5.05-46.75-17.45C67.81,195,55.54,172,40.1,139.43l-.23-.43a14,14,0,0,1,24.25-14l.1.17,18.68,30A6,6,0,0,0,94,152V60a14,14,0,0,1,28,0v60a6,6,0,0,0,12,0V44a14,14,0,0,1,28,0v76a6,6,0,0,0,12,0V76a14,14,0,0,1,28,0Z"/></g>',
     fields: [
       { key: "message", label: t("plugin.promptr.block.greeting.field.message.label"), kind: "textarea", placeholder: t("plugin.promptr.block.greeting.field.message.placeholder") },
       { key: "starters", label: t("plugin.promptr.block.greeting.field.starters.label"), kind: "list", placeholder: t("plugin.promptr.block.greeting.field.starters.placeholder") },
@@ -169,7 +169,7 @@ const BLOCK_TYPES = {
     label: t("plugin.promptr.block.custom.label"),
     hint: t("plugin.promptr.block.custom.hint"),
     color: "#64748b",
-    icon: '<path d="M12 20h9"/><path d="M16.5 3.5a2.1 2.1 0 013 3L7 19l-4 1 1-4z"/>',
+    icon: '<g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M225.91,74.79,181.22,30.1a14,14,0,0,0-19.8,0L38.1,153.41a13.94,13.94,0,0,0-4.1,9.9V208a14,14,0,0,0,14,14H216a6,6,0,0,0,0-12H110.49L225.91,94.59A14,14,0,0,0,225.91,74.79ZM93.52,210H48a2,2,0,0,1-2-2V163.31a2,2,0,0,1,.59-1.41L136,72.49,183.52,120ZM217.42,86.1,192,111.52,144.49,64,169.9,38.59a2,2,0,0,1,2.83,0l44.69,44.68A2,2,0,0,1,217.42,86.1Z"/></g>',
     multiple: true,
     fields: [
       { key: "title", label: t("plugin.promptr.block.custom.field.title.label"), kind: "text", placeholder: t("plugin.promptr.block.custom.field.title.placeholder") },

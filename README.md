@@ -195,6 +195,8 @@ in the page's own language. See `plugins/recordr` (`web/stream.js`), the model t
 | `ALLKIN_PLUGIN_ID`        | L'identifiant                                      |
 | `ALLKIN_PLUGIN_DIR`       | Le dossier du plugin (remplacé à chaque mise à jour) |
 | `ALLKIN_PLUGIN_DATA`      | Le dossier où écrire ses données (conservé)        |
+| `ALLKIN_SHARE`            | The folder shared by every agent and plugin        |
+| `ALLKIN_PLUGIN_SHARE`     | The plugin's own folder in it (`share/<id>`)       |
 | `ALLKIN_PLUGIN_SETTINGS`  | Tous les réglages, en JSON                         |
 | `PLUGIN_<CLÉ>`            | Chaque réglage (`PLUGIN_PORT`…)                    |
 | `PORT`                    | Le port à écouter (plugins web)                    |
@@ -202,7 +204,9 @@ in the page's own language. See `plugins/recordr` (`web/stream.js`), the model t
 
 Modifier un réglage redémarre le service. Sa sortie est visible dans le journal, sur la page du
 plugin. **N'écrire que dans `ALLKIN_PLUGIN_DATA`** : le dossier du plugin est remplacé à chaque
-mise à jour.
+mise à jour. The shared folder (`ALLKIN_SHARE`) is the exception: every agent and plugin writes
+there, and a plugin's own folder in it is `ALLKIN_PLUGIN_SHARE` (`share/<id>`), never another
+name; agents may edit its content.
 
 ## Écrire la page web
 

@@ -5,7 +5,7 @@
     {
       "id": "file-explorer",
       "name": "Explorateur de fichiers",
-      "version": "1.0.11",
+      "version": "1.0.15",
       "description": "L'onglet Fichiers de chaque agent (dépôt, archives, scripts, corbeille) et l'explorateur de ~/.allkin.",
       "author": "Allkin",
       "permissions": [
@@ -49,48 +49,48 @@
       "files": [
         {
           "path": "README-DE.md",
-          "size": 2884,
-          "sha256": "43df5d6da7c02ef3b73205e039a3748cdd364cac0adb1d71a0c88fb68e665984"
+          "size": 3533,
+          "sha256": "2780f55cd7544a5a6b38094de9e6033f5fdb68b215cfe6333653f92772cbd03c"
         },
         {
           "path": "README-EN.md",
-          "size": 2469,
-          "sha256": "facb0405fd25fdec69b3bc3332b1697583fbedae93195f7304c758cdd00bf8aa"
+          "size": 3036,
+          "sha256": "175051c47e0177538fd83572a1cf19b09f5f6ea8fe673cab6b1a605e85b73f49"
         },
         {
           "path": "README-ES.md",
-          "size": 2782,
-          "sha256": "7d091604e7f3214eceff3395bdc0bd5f206cd0b25c4202e167a12558bae4d343"
+          "size": 3392,
+          "sha256": "e7dd9baa45c954b94eb4c6598ac57863d92a958051d5e7721ccf6a94c9346e39"
         },
         {
           "path": "README.md",
-          "size": 2781,
-          "sha256": "6e423e81efe803c7d05752a77f7249cc636801355af4da82b3facf4350a5de0d"
+          "size": 3390,
+          "sha256": "e482ba80b1a9b3e24119bfc9cefd73ea4a0e46792811222454a5f5871d9a1bf8"
         },
         {
           "path": "explorer.css",
-          "size": 22883,
-          "sha256": "b48d8bcbd24d547f3163f035fd99a817eb077770b2214a0e9e7ac81524611f64"
+          "size": 25025,
+          "sha256": "f21344b8e6358822a08aed0835ab60dea4e031477829f6712ac4846da417f831"
         },
         {
           "path": "explorer.js",
-          "size": 83331,
-          "sha256": "134278c9ac0953b71b4c87055a9710b5e805d0a761835235a1f9dcec84b278ef"
+          "size": 96153,
+          "sha256": "0323889a532407399ed156b53956969dbfa437b56233f0c5e216eba10331e3ea"
         },
         {
           "path": "icon.svg",
-          "size": 239,
-          "sha256": "7d1ef7c8f58efa3d08ebf4b350f820153ce33dcbfee317f5661c5bc104746ad5"
+          "size": 553,
+          "sha256": "faa203f9ba7736ddfdfb39ea2cf455351d8bd5c1679b06b82269b34747583abb"
         },
         {
           "path": "locales.js",
-          "size": 41784,
-          "sha256": "95cd812681c519b97cba77307f420367dfb076d516f46188a3b0e29abfe6404b"
+          "size": 42559,
+          "sha256": "eaf8073da19824de00554555dc943569c3c1e05042bbb6fd9ddebcfcf46c20ef"
         },
         {
           "path": "plugin.json",
           "size": 1535,
-          "sha256": "67e5e304756b47a6a58b3c23590281487f19f3ec8197b16ab3cf88f0e152a60d"
+          "sha256": "09b56690f2e6d531af97cfed7e8785ffecb7d6086862e86926fca0e09c7cfa91"
         },
         {
           "path": "validation.json",
@@ -99,15 +99,15 @@
         },
         {
           "path": "view.html",
-          "size": 27920,
-          "sha256": "373070aabea0d55282eea9bfdbda57b5a4dd74d371a60c86a04bca27a7bf7248"
+          "size": 38088,
+          "sha256": "ba94e20aae1d7be6f32fd80178c22605bc3395bc4dc1a3a74c11c9875649d925"
         }
       ]
     },
     {
       "id": "markdown-editor",
       "name": "Éditeur markdown",
-      "version": "1.0.5",
+      "version": "1.0.6",
       "description": "L'éditeur markdown d'Allkin : on écrit dans le document mis en forme, sans jamais voir une balise. Missions, rôle des agents (CLAUDE.md) et fichiers .md.",
       "author": "Allkin",
       "permissions": [
@@ -181,8 +181,8 @@
         },
         {
           "path": "icon.svg",
-          "size": 276,
-          "sha256": "66cb29730da698a7c96731350eb59f2a1b739a1c27a000fd2c2e0ef9400cb24c"
+          "size": 714,
+          "sha256": "a6974df3d582a184884d59018cd5ba517f7371ccee65d8a6bbbd39b666caca52"
         },
         {
           "path": "locales.js",
@@ -197,12 +197,12 @@
         {
           "path": "plugin.json",
           "size": 1753,
-          "sha256": "5e909d93e8947840d67de776b0f6103799e17891c064cff62ad6f7edf221d009"
+          "sha256": "f6a7d0dbc9bde915dd5454c27863ec55f4bd78e85b67fa46370cb6a23c9a888f"
         },
         {
           "path": "ui.js",
-          "size": 30451,
-          "sha256": "b137400d0e1da12d21c2d6448f1b9a87524c97af134e40ceb495c5cfe7a6f7ca"
+          "size": 40952,
+          "sha256": "8e85aeb77c265262eeaa1b9b030b23c41295d2fa2e6da2b919b7352697838519"
         },
         {
           "path": "validation.json",
@@ -214,7 +214,7 @@
     {
       "id": "promptr",
       "name": "Promptr",
-      "version": "1.0.4",
+      "version": "1.0.5",
       "description": "L'atelier de prompts : dessinez un agent en blocs, ou ouvrez un prompt existant pour le voir en plan. Son agent dédié écrit le prompt depuis le plan, et le plan depuis un prompt.",
       "author": "Allkin",
       "permissions": [
@@ -293,18 +293,18 @@
         },
         {
           "path": "app.js",
-          "size": 60263,
-          "sha256": "928e5a086c1e69b88236aa5e510460359352619088d0a6b2e7e4df3cb085e768"
+          "size": 64594,
+          "sha256": "98c48f21de92171acbb9acf434de0a1a61d7e3e9052ec8b58f9562d6d276108c"
         },
         {
           "path": "blocks.js",
-          "size": 22740,
-          "sha256": "3bad4497f31ac721aa852b4c661d4f1d6fcdec9bbdc0fd048a3f9ca00d5fb849"
+          "size": 26223,
+          "sha256": "04be47a18dd3ebf2176fac2504e7329a5fdd764d7c1bc3b54cfdd0e2b908a2c0"
         },
         {
           "path": "icon.svg",
-          "size": 350,
-          "sha256": "399bd9b659a13f0e6f8cfb64439949fd9fb77700722524795b20ff01be6906a6"
+          "size": 834,
+          "sha256": "1df5240bcfae3f17106e7d88ce8c938091d1745422c418f3f063430a185ed946"
         },
         {
           "path": "locales.js",
@@ -314,12 +314,12 @@
         {
           "path": "plugin.json",
           "size": 3067,
-          "sha256": "9d78009c09bfaae79791d5ff4b98dec86b54c0cc6190f94fa2b6c925a38ed67f"
+          "sha256": "b6fcc01156842fad4827c8329be4cb17b7317e00c89b162d30757d0ada87d584"
         },
         {
           "path": "promptr.css",
-          "size": 25868,
-          "sha256": "49aa2006e5ed7ef20fbf2b86f6d79d485023259edc08af3df586f3bc274262e7"
+          "size": 26746,
+          "sha256": "50090430cf364ce6e4606c614ce59e58379111ab58cbda6f770be7954c673021"
         },
         {
           "path": "validation.json",
@@ -328,8 +328,8 @@
         },
         {
           "path": "view.html",
-          "size": 13326,
-          "sha256": "313ffac0b32582cef9b8a6f8b3f3391bd66cc90240f938c9fb4105d031748900"
+          "size": 17711,
+          "sha256": "e526f48ee1f474b77336a65a5a3261d2232666c82ff97fbc87ddea47e87f70fa"
         },
         {
           "path": "zip.js",
@@ -341,7 +341,7 @@
     {
       "id": "text-editor",
       "name": "Éditeur de texte",
-      "version": "1.0.4",
+      "version": "1.0.7",
       "description": "Ouvre les fichiers des agents dans un onglet : éditeur de code (80 langages colorés, numéros de ligne, recherche/remplacement, commentaires, indentation), aperçu markdown, images et PDF.",
       "author": "Allkin",
       "permissions": [
@@ -405,13 +405,13 @@
         },
         {
           "path": "editor.css",
-          "size": 11480,
-          "sha256": "e3991556ec01b1ac2d49bb5faeb1f1e2458c4d46ce08e0d2a9fba40659793eaa"
+          "size": 12682,
+          "sha256": "ce2e0ed292dd82fe6545a1b9e2a5bb206bf506bf33b3004e0f1a85bbccf5f0a1"
         },
         {
           "path": "editor.js",
-          "size": 44488,
-          "sha256": "598b52556da9d99b84da5f44923d9974f1d966ddd08ec755ae9677bf48a98c5a"
+          "size": 46578,
+          "sha256": "4b7216c8a535e31dcb437763b41519e7fe9496d920ab83eba86fa8e2a0787de8"
         },
         {
           "path": "hljs.js",
@@ -420,8 +420,8 @@
         },
         {
           "path": "icon.svg",
-          "size": 235,
-          "sha256": "f54e59c9bb79d3e856b48bcabff6a8d8b77ee3c0426975071615ef677ca54a30"
+          "size": 597,
+          "sha256": "9acdc9a7d739dffb12b03b39ff4712bf6b329bd6351fa1bfc5801985135320af"
         },
         {
           "path": "locales.js",
@@ -431,7 +431,7 @@
         {
           "path": "plugin.json",
           "size": 1776,
-          "sha256": "d07ef77da12b0df5eeae7cd473a4f6d8548a58023994583bd97ed6424438ed10"
+          "sha256": "86ad2aed321dc84a64a0b8e906a561e3660d459160559843e9bd04e20ae99afe"
         },
         {
           "path": "validation.json",
@@ -440,15 +440,15 @@
         },
         {
           "path": "view.html",
-          "size": 11152,
-          "sha256": "2ead0a921af9ff3e7d76b437663ad710b98cc412f28c9f47b8f6ad007b42d9a7"
+          "size": 14023,
+          "sha256": "729cfb8ccaa2058f9fed726983d4220b475b09dc69ed91f9c56b1f1150b54ab2"
         }
       ]
     },
     {
       "id": "wetty",
       "name": "WeTTY",
-      "version": "1.0.2",
+      "version": "1.0.3",
       "description": "Terminal dans le navigateur (WeTTY) : une session SSH sur la machine, ouverte dans un onglet d'Allkin.",
       "author": "butlerx/wetty — intégration Allkin",
       "homepage": "https://github.com/butlerx/wetty",
@@ -527,13 +527,13 @@
         },
         {
           "path": "icon.svg",
-          "size": 253,
-          "sha256": "3d305d4145170c6d97fedbe15189ea9d36d0af0e0ab81744670d7b0bf729fd9b"
+          "size": 568,
+          "sha256": "b238be3199dffc909444483deed7ebdfba5db6de5519ab416970cd2970623674"
         },
         {
           "path": "plugin.json",
           "size": 7343,
-          "sha256": "59aa101761662deb3ce4491035cdff9541ce3b5b5df6bb0796d649289f2ae5fc"
+          "sha256": "9792b2ced3a915a50ff2c85994d1ec15dec45fb4595ebba1233121317ec63e9d"
         },
         {
           "path": "start.mjs",

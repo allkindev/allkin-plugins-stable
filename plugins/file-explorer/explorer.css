@@ -246,6 +246,49 @@ button.data-select-act.data-select-done:hover { background: var(--accent); filte
 .data-table.select-mode .data-row-actions { display: none; }
 .data-row-checkbox { width: 1.1rem; height: 1.1rem; cursor: pointer; accent-color: var(--accent); }
 
+/* ---- Column widths (see bindColumnResize in explorer.js) -------------------
+   The grip is the right edge of a header cell. The table is never narrower
+   than its columns plus a readable name: it scrolls sideways instead. */
+.data-table { min-width: var(--fx-table-min, 0); }
+.data-table thead th { overflow: hidden; text-overflow: ellipsis; }
+.data-col-grip {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 9px;
+  cursor: col-resize;
+  touch-action: none;
+}
+.data-col-grip::after {
+  content: "";
+  position: absolute;
+  top: 25%;
+  bottom: 25%;
+  right: 0;
+  width: 1px;
+  background: var(--border);
+}
+.data-col-grip:hover::after,
+.data-table.is-resizing .data-col-grip::after { top: 0; bottom: 0; width: 2px; background: var(--accent); }
+.data-table.is-resizing { cursor: col-resize; user-select: none; }
+/* ---- The grid takes the whole page -----------------------------------------
+   No frame, no margin around the table: it runs from one edge of the page to
+   the other, from the page bar down to the bottom. A phone has its own
+   drawing (a list), further down. */
+@media (min-width: 721px) {
+  /* The name cell stays a real cell of the table: as a flex box it left the
+     grid of columns, and its line no longer met the line of its neighbours. */
+  .data-row td.data-row-name { display: table-cell; white-space: nowrap; overflow: hidden; }
+  .data-row td.data-row-name > .data-row-icon { display: inline-grid; vertical-align: middle; margin-right: var(--sp-2); }
+  .data-row td.data-row-name > .data-row-text { display: inline-flex; vertical-align: middle; max-width: calc(100% - 24px - var(--sp-2)); }
+  #data-view, #explorer-view { padding: 0; gap: 0; }
+  #data-view > .page-bar, #explorer-view > .page-bar { margin: 0; padding: 0 calc(var(--sp-4) + var(--safe-right)) 0 calc(var(--sp-4) + var(--safe-left)); }
+  #data-view .data-table-wrap, #explorer-view .data-table-wrap { border: 0; border-radius: 0; }
+  #data-view > :is(.data-toolbar, .data-select-bar, .data-sort-bar, .error),
+  #explorer-view > :is(.data-toolbar, .error) { margin: var(--sp-2) var(--sp-4); }
+}
+
 /* ---- Explorateur de ~/.allkin ---------------------------------------------- */
 .explorer-view {
   flex: 1;
@@ -418,6 +461,7 @@ button.data-select-act.data-select-done:hover { background: var(--accent); filte
   .data-table-wrap { border: none; border-radius: 0; background: transparent; overflow-x: hidden; }
   .data-table thead { display: none; }
   .data-table, .data-table tbody { display: block; }
+  .data-table { min-width: 0; }
   .data-table tr.data-row {
     display: grid;
     grid-template-columns: auto 1fr auto;

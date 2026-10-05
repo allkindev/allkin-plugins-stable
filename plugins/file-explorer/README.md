@@ -29,8 +29,18 @@ Le bouton dossier sur la ligne d'un agent ouvre son espace `data/` :
 - **exécution de scripts** `.sh`, après lecture de leur contenu, avec la sortie en direct ;
 - **corbeille** : ce qui est supprimé part dans `Trash/`, vidable à part.
 
+Avec le plugin *Éditeur d'images*, le menu contextuel d'une image propose **Modifier l'image**.
+
 Un clic sur un fichier l'ouvre dans le plugin *Éditeur de texte* s'il est installé, et le
 télécharge sinon.
+
+## Dossier partagé
+
+Dans la liste Plugins du menu Allkin, **Dossier partagé** ouvre `~/.allkin/share`, commun à tous
+les agents et à tous les plugins : chacun y lit, écrit, ajoute et supprime. Même page que les
+fichiers d'un agent, sans exécution de scripts. Un dossier qui porte le nom d'un plugin installé
+est le sien : son contenu se modifie, le dossier lui-même reste. Copier ou couper dans les fichiers
+d'un agent puis coller dans le dossier partagé (ou l'inverse) passe d'un espace à l'autre.
 
 ## Explorateur de `~/.allkin`
 

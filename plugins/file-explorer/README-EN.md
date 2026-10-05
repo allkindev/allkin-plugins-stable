@@ -27,8 +27,18 @@ The folder button on the row of an agent opens its `data/` space:
 - **running `.sh` scripts**, after reading their content, with the output live;
 - **bin**: what is deleted goes to `Trash/`, which can be emptied separately.
 
+With the *Image editor* plugin, the context menu of an image offers **Edit the image**.
+
 A click on a file opens it in the *Text editor* plugin if it is installed, and downloads it
 otherwise.
+
+## Shared folder
+
+In the Plugins list of the Allkin menu, **Shared folder** opens `~/.allkin/share`, common to every
+agent and every plugin: all of them read, write, add and delete there. Same page as an agent's
+files, without running scripts. A folder named after an installed plugin is that plugin's: its
+content can change, the folder itself stays. Copying or cutting in an agent's files and pasting
+in the shared folder (or the other way round) goes from one to the other.
 
 ## Explorer of `~/.allkin`
 

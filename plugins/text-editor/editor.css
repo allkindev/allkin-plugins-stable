@@ -328,3 +328,14 @@ button.code-find-act { height: 1.9rem; min-height: 0; padding: 0 var(--sp-3); fo
   .code-status { gap: var(--sp-3); }
   .code-status #code-status-indent { display: none; }
 }
+
+/* ---- The editor takes the width of the page --------------------------------
+   Whatever the size of the screen: no margin around the text, no frame on its
+   sides. The bars above and under keep their padding, the file runs from one
+   edge to the other. data-edit-zone="reduced" on the view (or around it) keeps
+   the framed drawing. */
+.file-view.file-view:not([data-edit-zone="reduced"], [data-edit-zone="reduced"] *) { padding-left: 0; padding-right: 0; padding-bottom: 0; gap: var(--sp-2); }
+.file-view:not([data-edit-zone="reduced"], [data-edit-zone="reduced"] *) > :is(.file-view-header, .code-find, .code-status) { margin-left: calc(var(--sp-3) + var(--safe-left)); margin-right: calc(var(--sp-3) + var(--safe-right)); }
+.file-view:not([data-edit-zone="reduced"], [data-edit-zone="reduced"] *) > .code-status { padding-bottom: calc(var(--sp-2) + var(--safe-bottom)); }
+.file-view:not([data-edit-zone="reduced"], [data-edit-zone="reduced"] *) :is(.file-editor-wrap, .file-preview, .file-live) { border-left: 0; border-right: 0; border-radius: 0; }
+.file-view.is-fullscreen:not([data-edit-zone="reduced"], [data-edit-zone="reduced"] *) { padding-top: calc(var(--sp-3) + var(--safe-top)); }

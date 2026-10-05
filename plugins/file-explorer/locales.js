@@ -14,6 +14,8 @@
 window.Allkin.i18n.register("en", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Files — {name}",
+  "plugin.file-explorer.share.name": "Shared folder",
+  "plugin.file-explorer.share.meta": "Common to every agent and plugin",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Upload files",
   "plugin.file-explorer.new.folder": "New folder",
@@ -70,6 +72,7 @@ window.Allkin.i18n.register("en", {
   "plugin.file-explorer.ctx.archive": "Archive",
   "plugin.file-explorer.ctx.archiveCount": "Archive ({count})",
   "plugin.file-explorer.ctx.extract": "Extract",
+  "plugin.file-explorer.ctx.editImage": "Edit the image",
   "plugin.file-explorer.ctx.upload": "Upload files…",
   "plugin.file-explorer.ctx.computing": "Computing…",
   "plugin.file-explorer.ctx.stat.one": "{count} item · {size}",
@@ -168,6 +171,8 @@ window.Allkin.i18n.register("en", {
 window.Allkin.i18n.register("fr", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Fichiers — {name}",
+  "plugin.file-explorer.share.name": "Dossier partagé",
+  "plugin.file-explorer.share.meta": "Commun à tous les agents et plugins",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Déposer des fichiers",
   "plugin.file-explorer.new.folder": "Nouveau dossier",
@@ -224,6 +229,7 @@ window.Allkin.i18n.register("fr", {
   "plugin.file-explorer.ctx.archive": "Archiver",
   "plugin.file-explorer.ctx.archiveCount": "Archiver ({count})",
   "plugin.file-explorer.ctx.extract": "Désarchiver",
+  "plugin.file-explorer.ctx.editImage": "Modifier l'image",
   "plugin.file-explorer.ctx.upload": "Déposer des fichiers…",
   "plugin.file-explorer.ctx.computing": "Calcul…",
   "plugin.file-explorer.ctx.stat.one": "{count} élément · {size}",
@@ -322,6 +328,8 @@ window.Allkin.i18n.register("fr", {
 window.Allkin.i18n.register("es", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Archivos: {name}",
+  "plugin.file-explorer.share.name": "Carpeta compartida",
+  "plugin.file-explorer.share.meta": "Común a todos los agentes y plugins",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Subir archivos",
   "plugin.file-explorer.new.folder": "Nueva carpeta",
@@ -378,6 +386,7 @@ window.Allkin.i18n.register("es", {
   "plugin.file-explorer.ctx.archive": "Comprimir",
   "plugin.file-explorer.ctx.archiveCount": "Comprimir ({count})",
   "plugin.file-explorer.ctx.extract": "Extraer",
+  "plugin.file-explorer.ctx.editImage": "Editar la imagen",
   "plugin.file-explorer.ctx.upload": "Subir archivos…",
   "plugin.file-explorer.ctx.computing": "Calculando…",
   "plugin.file-explorer.ctx.stat.one": "{count} elemento · {size}",
@@ -476,6 +485,8 @@ window.Allkin.i18n.register("es", {
 window.Allkin.i18n.register("de", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Dateien – {name}",
+  "plugin.file-explorer.share.name": "Freigegebener Ordner",
+  "plugin.file-explorer.share.meta": "Gemeinsam für alle Agenten und Plugins",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Dateien hochladen",
   "plugin.file-explorer.new.folder": "Neuer Ordner",
@@ -532,6 +543,7 @@ window.Allkin.i18n.register("de", {
   "plugin.file-explorer.ctx.archive": "Archivieren",
   "plugin.file-explorer.ctx.archiveCount": "Archivieren ({count})",
   "plugin.file-explorer.ctx.extract": "Entpacken",
+  "plugin.file-explorer.ctx.editImage": "Bild bearbeiten",
   "plugin.file-explorer.ctx.upload": "Dateien hochladen…",
   "plugin.file-explorer.ctx.computing": "Wird berechnet…",
   "plugin.file-explorer.ctx.stat.one": "{count} Element · {size}",

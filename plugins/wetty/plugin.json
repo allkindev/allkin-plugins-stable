@@ -1,6 +1,6 @@
 {
   "name": "WeTTY",
-  "version": "1.0.2",
+  "version": "1.0.3",
   "description": "Terminal dans le navigateur (WeTTY) : une session SSH sur la machine, ouverte dans un onglet d'Allkin.",
   "author": "butlerx/wetty — intégration Allkin",
   "homepage": "https://github.com/butlerx/wetty",
