@@ -5,7 +5,7 @@
     {
       "id": "file-explorer",
       "name": "Explorateur de fichiers",
-      "version": "1.0.18",
+      "version": "1.0.19",
       "description": "L'onglet Fichiers de chaque agent (dépôt, archives, scripts, corbeille) et l'explorateur de ~/.allkin.",
       "author": "Allkin",
       "permissions": [
@@ -74,8 +74,8 @@
         },
         {
           "path": "explorer.js",
-          "size": 98404,
-          "sha256": "7e15df89de10e9cba77c95ff09cc0510fe6a745feaf8791f1da7802c579ca83e"
+          "size": 98711,
+          "sha256": "6bae064f52a8f50ff313cd626837ee19573048d644d18a8a3893a0c8901e86b1"
         },
         {
           "path": "icon.svg",
@@ -90,7 +90,7 @@
         {
           "path": "plugin.json",
           "size": 1535,
-          "sha256": "f3e6097be9eb458e7c30ac55c64bd89416fceb17e015af25b255f2dac3855d65"
+          "sha256": "286d0be137e06d9171993b88b1fcb2ddccf1d91579a7b65c23a9778b94ab08a6"
         },
         {
           "path": "validation.json",

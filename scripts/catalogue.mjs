@@ -112,6 +112,11 @@ function readPlugin(id) {
     if (!declared) fail(id, "un plugin qui déclare « agent » doit demander le droit « agent ».");
   }
 
+  // Plugins it cannot work without: Allkin installs them with it.
+  if (m.requires !== undefined && (!Array.isArray(m.requires) || !m.requires.every((r) => typeof r === "string" && ID_PATTERN.test(r) && r !== id))) {
+    fail(id, "requires doit être une liste d'identifiants d'autres plugins.");
+  }
+
   const permissions = (Array.isArray(m.permissions) ? m.permissions : []).map((p) => (typeof p === "string" ? { id: p } : p));
   for (const p of permissions) {
     if (!p || typeof p.id !== "string") fail(id, "chaque droit doit avoir un id.");
@@ -145,6 +150,7 @@ function readPlugin(id) {
     ui: Boolean(m.ui),
     ...(m.agent ? { agent: { name: m.agent.name } } : {}),
     ...(icon ? { icon } : {}),
+    ...(Array.isArray(m.requires) && m.requires.length ? { requires: m.requires } : {}),
     // validation.json of the folder: "validated" with its date, or pending.
     validation: (checkChannel(`plugins/${id}`, readValidation(dir)), readValidation(dir)),
     // Translations of the texts above (name, description, permission reasons):

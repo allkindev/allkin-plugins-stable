@@ -76,6 +76,9 @@ Le nom du dossier est l'identifiant du plugin : il ne change jamais.
   (`"type": "service", "capability": "speech"`) lists the connected services of Allkin able to do
   that; the plugin receives the identifier of the chosen one, never its key — see
   [Using a service of Allkin](#using-a-service-of-allkin).
+- **requires** — optional: `"requires": ["markdown-editor"]` names the plugins this one cannot work
+  without. Allkin installs those missing at the same time, after telling the user; each gets its
+  rights on its own page, like any plugin.
 - **service** — lancé sans shell, dans le dossier du plugin. `node` désigne le Node d'Allkin ;
   une commande en `./` est un fichier du plugin (le rendre exécutable dans le dépôt).
 - **web** — suppose un service. `port` fixe ou `portSetting` (un réglage `number`). La page

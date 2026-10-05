@@ -928,6 +928,10 @@ document.addEventListener("keydown", (e) => {
    le leur. */
 document.addEventListener("contextmenu", (e) => {
   if (state.view !== "files") return;
+  // Only the page of the files: the rest of Allkin (the sidebar, the tabs,
+  // another menu) keeps its own right click — the menu of an agent opened by
+  // a right click in the sidebar was replaced by this one.
+  if (e.defaultPrevented || !e.target.closest("#data-view")) return;
   if (e.target.closest("input, textarea, [contenteditable='true']")) return;
   if (e.target.closest("#data-context-menu, #tab-context-menu, .chat-menu, .modal")) return;
 
@@ -1881,7 +1885,7 @@ function openExplorerMenu(row, x, y) {
 }
 
 document.addEventListener("contextmenu", (e) => {
-  if (state.view !== "explorer") return;
+  if (state.view !== "explorer" || e.defaultPrevented) return;
   const row = e.target.closest("#explorer-view .explorer-row");
   if (!row?._explorer || row._explorer.entry.type === "parent") return;
   e.preventDefault();
