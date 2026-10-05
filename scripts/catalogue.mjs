@@ -3,8 +3,17 @@
  * Vérifie les plugins et régénère `catalogue.json` — le fichier unique
  * qu'Allkin télécharge pour afficher la liste des plugins disponibles.
  *
- *   node scripts/catalogue.mjs           réécrit catalogue.json
+ *   node scripts/catalogue.mjs           réécrit catalogue.json et le signe
  *   node scripts/catalogue.mjs --check   vérifie sans écrire (code 1 si écart)
+ *   node scripts/catalogue.mjs --unsigned   writes without signing (a repository that is not Allkin's)
+ *
+ * SIGNATURE. Allkin only reads the catalogue of its two own repositories when
+ * `catalogue.json.sig` holds the owner's Ed25519 signature of the bytes of
+ * `catalogue.json` (see src/catalogue-signature.ts in Allkin, which carries
+ * the public key). The private key never enters a repository: it is read from
+ * `~/.allkin-signing/catalogue.key` (PEM), or from the path in
+ * ALLKIN_CATALOGUE_KEY. Without it this script refuses to write — a catalogue
+ * published unsigned would empty the Plugins page of every installation.
  *
  * Le dépôt est lu par Allkin en fichiers bruts, qui ne savent pas lister un
  * dossier : le catalogue énumère donc les fichiers de chaque plugin, avec leur
@@ -14,7 +23,8 @@
  *
  * Aucune dépendance.
  */
-import { createHash } from "node:crypto";
+import { createHash, createPrivateKey, createPublicKey, sign, verify } from "node:crypto";
+import { homedir } from "node:os";
 import { existsSync, readdirSync, readFileSync, statSync, writeFileSync } from "node:fs";
 import { dirname, join, relative, sep } from "node:path";
 import { fileURLToPath } from "node:url";
@@ -22,6 +32,22 @@ import { fileURLToPath } from "node:url";
 const ROOT = dirname(dirname(fileURLToPath(import.meta.url)));
 const PLUGINS_DIR = join(ROOT, "plugins");
 const CATALOGUE_PATH = join(ROOT, "catalogue.json");
+const SIGNATURE_PATH = `${CATALOGUE_PATH}.sig`;
+const KEY_PATH = process.env.ALLKIN_CATALOGUE_KEY || join(homedir(), ".allkin-signing", "catalogue.key");
+/** The public half of the key, as Allkin carries it (SPKI, base64). */
+const PUBLIC_KEY = "MCowBQYDK2VwAyEAVyrJSbeVS7qHsA7k7prO4ceOHN33gC4SVa8iEN+hDhk=";
+
+const publicKey = () => createPublicKey({ key: Buffer.from(PUBLIC_KEY, "base64"), format: "der", type: "spki" });
+
+/** Is the signature on disk the one of this content, by the key Allkin trusts? */
+function signatureMatches(content) {
+  try {
+    const raw = Buffer.from(readFileSync(SIGNATURE_PATH, "utf-8").trim(), "base64");
+    return verify(null, Buffer.from(content, "utf-8"), publicKey(), raw);
+  } catch {
+    return false;
+  }
+}
 
 const ID_PATTERN = /^[a-z0-9](?:[a-z0-9-]{0,62}[a-z0-9])?$/;
 /* Directive stricte : toujours 1.0.N, N entier sans zéro devant, augmenté de
@@ -243,8 +269,26 @@ if (process.argv.includes("--check")) {
     console.error("catalogue.json n'est pas à jour : lance node scripts/catalogue.mjs");
     process.exit(1);
   }
+  if (!process.argv.includes("--unsigned") && !signatureMatches(content)) {
+    console.error("catalogue.json.sig is missing or does not match: run node scripts/catalogue.mjs");
+    process.exit(1);
+  }
   console.log(`catalogue.json à jour (${plugins.length} plugin${plugins.length > 1 ? "s" : ""}).`);
-} else {
+} else if (process.argv.includes("--unsigned")) {
   writeFileSync(CATALOGUE_PATH, content);
-  console.log(`catalogue.json écrit (${plugins.length} plugin${plugins.length > 1 ? "s" : ""}).`);
+  console.log(`catalogue.json écrit, not signed (${plugins.length} plugin${plugins.length > 1 ? "s" : ""}).`);
+} else {
+  if (!existsSync(KEY_PATH)) {
+    console.error(`erreur     signing key not found (${KEY_PATH}): the catalogue is not written. Allkin refuses an unsigned catalogue.`);
+    process.exit(1);
+  }
+  const signature = sign(null, Buffer.from(content, "utf-8"), createPrivateKey(readFileSync(KEY_PATH, "utf-8")));
+  // The key on this machine must be the one Allkin carries, or every installation would refuse the result.
+  if (!verify(null, Buffer.from(content, "utf-8"), publicKey(), signature)) {
+    console.error(`erreur     ${KEY_PATH} is not the key Allkin trusts (see PUBLIC_KEY): the catalogue is not written.`);
+    process.exit(1);
+  }
+  writeFileSync(CATALOGUE_PATH, content);
+  writeFileSync(SIGNATURE_PATH, signature.toString("base64") + "\n");
+  console.log(`catalogue.json écrit et signé (${plugins.length} plugin${plugins.length > 1 ? "s" : ""}).`);
 }
