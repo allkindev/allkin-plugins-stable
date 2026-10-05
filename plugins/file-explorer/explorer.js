@@ -1856,6 +1856,65 @@ function renderExplorerEntries() {
   }
 }
 
+/* ---- The menu of a row of ~/.allkin: read-only ---- */
+
+let explorerMenuTarget = null;
+
+function closeExplorerMenu() {
+  el("explorer-context-menu")?.classList.add("hidden");
+  explorerMenuTarget = null;
+}
+
+function openExplorerMenu(row, x, y) {
+  const { entry, onOpen } = row._explorer;
+  const path = explorerEntries.path ? `${explorerEntries.path}/${entry.name}` : entry.name;
+  explorerMenuTarget = { entry, onOpen, path };
+  el("explorer-ctx-download").classList.toggle("hidden", entry.type !== "file");
+  const menu = el("explorer-context-menu");
+  menu.style.left = "0px";
+  menu.style.top = "0px";
+  menu.classList.remove("hidden");
+  const rect = menu.getBoundingClientRect();
+  const safe = safeAreaInsets();
+  menu.style.left = `${Math.max(8 + safe.left, Math.min(x, window.innerWidth - rect.width - 8 - safe.right))}px`;
+  menu.style.top = `${Math.max(8 + safe.top, Math.min(y, window.innerHeight - rect.height - 8 - safe.bottom))}px`;
+}
+
+document.addEventListener("contextmenu", (e) => {
+  if (state.view !== "explorer") return;
+  const row = e.target.closest("#explorer-view .explorer-row");
+  if (!row?._explorer || row._explorer.entry.type === "parent") return;
+  e.preventDefault();
+  openExplorerMenu(row, e.clientX, e.clientY);
+});
+document.addEventListener("pointerdown", (e) => {
+  if (!e.target.closest("#explorer-context-menu")) closeExplorerMenu();
+});
+document.addEventListener("keydown", (e) => {
+  if (e.key === "Escape") closeExplorerMenu();
+});
+el("explorer-ctx-open").addEventListener("click", () => {
+  const target = explorerMenuTarget;
+  closeExplorerMenu();
+  target?.onOpen();
+});
+el("explorer-ctx-download").addEventListener("click", () => {
+  const target = explorerMenuTarget;
+  closeExplorerMenu();
+  if (target) window.open(`/api/allkin/fs/file?path=${encodeURIComponent(target.path)}&download=1`, "_blank");
+});
+el("explorer-ctx-copy-path").addEventListener("click", async () => {
+  const target = explorerMenuTarget;
+  closeExplorerMenu();
+  if (!target) return;
+  try {
+    await navigator.clipboard.writeText(`~/.allkin/${target.path}`);
+    bulle(t("plugin.file-explorer.ctx.pathCopied"));
+  } catch {
+    erreur(t("plugin.file-explorer.ctx.copyFailed"));
+  }
+});
+
 /** Même dessin que les lignes de l'onglet Fichiers : tuile, nom, détail. */
 function explorerRow(entry, onOpen) {
   const row = document.createElement("tr");
@@ -1892,6 +1951,7 @@ function explorerRow(entry, onOpen) {
   }
 
   row.append(nameCell, sizeCell, dateCell);
+  row._explorer = { entry, onOpen };
   row.addEventListener("click", onOpen);
   row.addEventListener("keydown", (e) => {
     if (e.key === "Enter") onOpen();

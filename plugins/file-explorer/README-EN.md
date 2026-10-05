@@ -47,6 +47,8 @@ backups. Secrets cannot be read there. A file opens in a **viewer** tab, on a bl
 text without colouring or layout, an image, a PDF, or the entries of an archive (zip, tar) without
 extracting it; other kinds are downloaded.
 
+Right-click an item: Open, Download, Copy the path.
+
 ## Without this plugin
 
 No more Files tab nor explorer: the folder button of the agents and the “Explorer” button of the

@@ -49,6 +49,8 @@ sessions, sauvegardes. Les secrets n'y sont pas lisibles. Un fichier s'ouvre dan
 **visualiseur**, sur fond bleu : texte brut sans coloration ni mise en forme, image, PDF, ou le
 contenu d'une archive (zip, tar) sans l'extraire ; les autres types se téléchargent.
 
+Clic droit sur un élément : Ouvrir, Télécharger, Copier le chemin.
+
 ## Sans ce plugin
 
 Plus d'onglet Fichiers ni d'explorateur : le bouton dossier des agents et le bouton « Explorateur »

@@ -5,7 +5,7 @@
     {
       "id": "file-explorer",
       "name": "Explorateur de fichiers",
-      "version": "1.0.15",
+      "version": "1.0.18",
       "description": "L'onglet Fichiers de chaque agent (dépôt, archives, scripts, corbeille) et l'explorateur de ~/.allkin.",
       "author": "Allkin",
       "permissions": [
@@ -49,33 +49,33 @@
       "files": [
         {
           "path": "README-DE.md",
-          "size": 3533,
-          "sha256": "2780f55cd7544a5a6b38094de9e6033f5fdb68b215cfe6333653f92772cbd03c"
+          "size": 3602,
+          "sha256": "3b70c1a2135ff14a47980dd73fc612799b7855b0ba143521efd1a70a00d98a81"
         },
         {
           "path": "README-EN.md",
-          "size": 3036,
-          "sha256": "175051c47e0177538fd83572a1cf19b09f5f6ea8fe673cab6b1a605e85b73f49"
+          "size": 3089,
+          "sha256": "59bd7cf173bb789c87b75be45f0ad7cc9ba4dd535dd99328b2f09a5554afea22"
         },
         {
           "path": "README-ES.md",
-          "size": 3392,
-          "sha256": "e7dd9baa45c954b94eb4c6598ac57863d92a958051d5e7721ccf6a94c9346e39"
+          "size": 3456,
+          "sha256": "d3302e3098ee22a5294498c686ab4cc5f09f7a0638f919b475aa454c338073f6"
         },
         {
           "path": "README.md",
-          "size": 3390,
-          "sha256": "e482ba80b1a9b3e24119bfc9cefd73ea4a0e46792811222454a5f5871d9a1bf8"
+          "size": 3462,
+          "sha256": "18040084966b94fcc71000e6e91d24402708e875e3403192d39d80b37e8658f4"
         },
         {
           "path": "explorer.css",
-          "size": 25025,
-          "sha256": "f21344b8e6358822a08aed0835ab60dea4e031477829f6712ac4846da417f831"
+          "size": 27346,
+          "sha256": "38d8a173feb45403ebd2158098c7b00e2cf71c35ce3f39e386ab68edcf19240a"
         },
         {
           "path": "explorer.js",
-          "size": 96153,
-          "sha256": "0323889a532407399ed156b53956969dbfa437b56233f0c5e216eba10331e3ea"
+          "size": 98404,
+          "sha256": "7e15df89de10e9cba77c95ff09cc0510fe6a745feaf8791f1da7802c579ca83e"
         },
         {
           "path": "icon.svg",
@@ -84,13 +84,13 @@
         },
         {
           "path": "locales.js",
-          "size": 42559,
-          "sha256": "eaf8073da19824de00554555dc943569c3c1e05042bbb6fd9ddebcfcf46c20ef"
+          "size": 43355,
+          "sha256": "5f22ca5df6fb25c1fd4f5a4d6291317d4d9ea4060c5a46dd72d82995d157fd7f"
         },
         {
           "path": "plugin.json",
           "size": 1535,
-          "sha256": "09b56690f2e6d531af97cfed7e8785ffecb7d6086862e86926fca0e09c7cfa91"
+          "sha256": "f3e6097be9eb458e7c30ac55c64bd89416fceb17e015af25b255f2dac3855d65"
         },
         {
           "path": "validation.json",
@@ -99,8 +99,8 @@
         },
         {
           "path": "view.html",
-          "size": 38088,
-          "sha256": "ba94e20aae1d7be6f32fd80178c22605bc3395bc4dc1a3a74c11c9875649d925"
+          "size": 40111,
+          "sha256": "ad501326ab7484e2b501f0bc83360ae4eb3812394870b594b7ec6d19e12e5265"
         }
       ]
     },

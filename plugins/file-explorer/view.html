@@ -150,6 +150,23 @@
 <!-- Menu contextuel de l'explorateur (clic droit, appui long, bouton ⋯ d'une
      ligne) — voir openDataContextMenu() dans explorer.js. Les mêmes gestes
      qu'un explorateur de bureau. Les entrées se grisent selon ce qui est visé. -->
+<!-- The menu of a row of the ~/.allkin explorer: read-only, so only what
+     reads — open, download, copy the path. -->
+<div class="tab-context-menu data-ctx-menu hidden" id="explorer-context-menu" role="menu">
+  <button type="button" class="chat-menu-item" id="explorer-ctx-open" role="menuitem">
+    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#8b8bf5" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(0.09375)" fill="#8b8bf5" stroke="none"><path d="M212.24,83.76l-56-56A6,6,0,0,0,152,26H56A14,14,0,0,0,42,40V216a14,14,0,0,0,14,14H200a14,14,0,0,0,14-14V88A6,6,0,0,0,212.24,83.76ZM158,46.48,193.52,82H158ZM200,218H56a2,2,0,0,1-2-2V40a2,2,0,0,1,2-2h90V88a6,6,0,0,0,6,6h50V216A2,2,0,0,1,200,218Z"/></g></svg>
+    <span data-i18n="common.open">Open</span>
+  </button>
+  <button type="button" class="chat-menu-item" id="explorer-ctx-download" role="menuitem">
+    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="#38bdf8" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(0.09375)" fill="#38bdf8" stroke="none"><path d="M222,144v64a6,6,0,0,1-6,6H40a6,6,0,0,1-6-6V144a6,6,0,0,1,12,0v58H210V144a6,6,0,0,1,12,0Zm-98.24,4.24a6,6,0,0,0,8.48,0l40-40a6,6,0,0,0-8.48-8.48L134,129.51V32a6,6,0,0,0-12,0v97.51L92.24,99.76a6,6,0,0,0-8.48,8.48Z"/></g></svg>
+    <span data-i18n="common.download">Download</span>
+  </button>
+  <button type="button" class="chat-menu-item" id="explorer-ctx-copy-path" role="menuitem">
+    <svg class="icon icon-sm" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><g transform="scale(0.09375)" fill="currentColor" stroke="none"><path d="M216,34H88a6,6,0,0,0-6,6V82H40a6,6,0,0,0-6,6V216a6,6,0,0,0,6,6H168a6,6,0,0,0,6-6V174h42a6,6,0,0,0,6-6V40A6,6,0,0,0,216,34ZM162,210H46V94H162Zm48-48H174V88a6,6,0,0,0-6-6H94V46H210Z"/></g></svg>
+    <span data-i18n="plugin.file-explorer.ctx.copyPath">Copy the path</span>
+  </button>
+</div>
+
 <div class="tab-context-menu data-ctx-menu hidden" id="data-context-menu" role="menu">
   <div class="data-ctx-head hidden" id="data-ctx-head">
     <span class="data-ctx-head-icon" id="data-ctx-head-icon"></span>

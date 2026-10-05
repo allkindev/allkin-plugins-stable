@@ -50,6 +50,8 @@ Agenten, Sitzungen, Sicherungen. Geheimnisse sind dort nicht lesbar. Eine Datei 
 einem **Betrachter**-Tab auf blauem Grund: Rohtext ohne Färbung oder Layout, ein Bild, ein PDF
 oder der Inhalt eines Archivs (zip, tar) ohne es zu entpacken; andere Arten werden heruntergeladen.
 
+Rechtsklick auf ein Element: Öffnen, Herunterladen, Pfad kopieren.
+
 ## Ohne dieses Plugin
 
 Kein Tab Dateien und kein Explorer mehr: Die Ordner-Schaltfläche der Agenten und die Schaltfläche

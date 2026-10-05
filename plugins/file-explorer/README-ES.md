@@ -50,6 +50,8 @@ abre en una pestaña **visor**, sobre fondo azul: texto en bruto sin coloreado n
 imagen, un PDF, o el contenido de un archivo comprimido (zip, tar) sin extraerlo; los demás tipos
 se descargan.
 
+Clic derecho en un elemento: Abrir, Descargar, Copiar la ruta.
+
 ## Sin este plugin
 
 Ya no hay pestaña Archivos ni explorador: desaparecen el botón de carpeta de los agentes y el
