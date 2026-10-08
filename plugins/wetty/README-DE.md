@@ -14,7 +14,7 @@ SSH-Client.
 
 Beim **ersten Start** wird WeTTY von npm heruntergeladen und sein natives Modul `node-pty` für
 die Maschine kompiliert: Rechne mit zehn Sekunden bis einer Minute. Das Protokoll des Dienstes
-zeigt den Fortschritt; solange das nicht abgeschlossen ist, antwortet die Seite „Das Plugin
+zeigt den Fortschritt; solange das nicht abgeschlossen ist, antwortet die Seite „Das Tool
 antwortet nicht“ – lade sie danach neu. Die folgenden Starts erfolgen sofort.
 
 ## Warum SSH, selbst zur lokalen Maschine
@@ -46,8 +46,8 @@ installiert sein und die gewählte Authentifizierung akzeptieren
 
 ## Details
 
-- WeTTY wird im Datenordner des Plugins (`runtime/`) installiert, der bei Aktualisierungen des
-  Plugins erhalten bleibt. Das Löschen dieses Ordners erzwingt eine Neuinstallation beim nächsten
+- WeTTY wird im Datenordner des Tools (`runtime/`) installiert, der bei Aktualisierungen des
+  Tools erhalten bleibt. Das Löschen dieses Ordners erzwingt eine Neuinstallation beim nächsten
   Start.
 - Die Seite wird unter `/plugins/wetty/web` (Option `--base`) ausgeliefert und von Allkin
   weitergeleitet, WebSocket inbegriffen: Sie ist nie direkt im Netzwerk erreichbar.

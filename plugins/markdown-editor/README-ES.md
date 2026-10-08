@@ -9,7 +9,7 @@ sigue siendo Markdown corriente.
 - **Misiones**: el texto de cada ficha.
 - **Rol de un agente**: la sección «Rol» de su página, y la redacción del rol en el asistente de
   creación de un agente.
-- **Archivos `.md`**: con el plugin *Editor de texto*, que lo usa para los archivos Markdown.
+- **Archivos `.md`**: con la herramienta *Editor de texto*, que lo usa para los archivos Markdown.
 
 ## La barra de herramientas
 
@@ -78,14 +78,14 @@ Solo se reescriben los bloques que modificas: corregir una palabra no cambia el 
 del documento. El botón **Markdown en bruto** muestra el texto exacto del archivo, y permite
 corregirlo a mano.
 
-## Sin este plugin
+## Sin esta herramienta
 
 Estas ediciones dejan de existir: ni misiones, ni sección «Rol» (el `CLAUDE.md` de un agente sigue
 en su sitio y sigue sirviendo, simplemente ya no se puede modificar desde la interfaz), y los
 archivos `.md` se abren como texto sin formato. La visualización de los mensajes de los agentes no
-depende de este plugin.
+depende de esta herramienta.
 
-## Para los demás plugins
+## Para las demás herramientas
 
 ```js
 const editor = Allkin.capability("markdown-editor").create({
@@ -103,4 +103,4 @@ editor.render();   // luego reload(), focus("start" | "end"), isFocused(), destr
 
 ## Permiso solicitado
 
-- **Interfaz de Allkin**: el plugin se ejecuta en la página de Allkin, con tu sesión.
+- **Interfaz de Allkin**: la herramienta se ejecuta en la página de Allkin, con tu sesión.

@@ -69,9 +69,9 @@ une pastille orange le signale aussi sur l'onglet.
   avec votre session : elle crée l'agent d'essai et, quand vous le demandez,
   l'agent final.
 - **Agent dédié** — Allkin crée l'agent « Promptr », sans aucun droit sur la
-  machine ni sur les autres agents. Son rôle est fourni par le plugin
+  machine ni sur les autres agents. Son rôle est fourni par l'outil
   (`agent.md`) et rétabli à chaque mise à jour ; son modèle reste réglable sur
-  sa page Agent. Il disparaît avec le plugin. Chaque génération ou analyse
+  sa page Agent. Il disparaît avec l'outil. Chaque génération ou analyse
   consomme votre fournisseur IA.
 
 Le plan en cours est gardé dans ce navigateur.

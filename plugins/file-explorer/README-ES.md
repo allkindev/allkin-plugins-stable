@@ -29,17 +29,17 @@ El botón de carpeta en la fila de un agente abre su espacio `data/`:
 - **ejecución de scripts** `.sh`, tras leer su contenido, con la salida en directo;
 - **papelera**: lo que se elimina va a `Trash/`, que se puede vaciar aparte.
 
-Con el plugin *Editor de imágenes*, el menú contextual de una imagen ofrece **Editar la imagen**.
+Con la herramienta *Editor de imágenes*, el menú contextual de una imagen ofrece **Editar la imagen**.
 
-Un clic en un archivo lo abre en el plugin *Editor de texto* si está instalado, y lo descarga si
+Un clic en un archivo lo abre en la herramienta *Editor de texto* si está instalada, y lo descarga si
 no.
 
 ## Carpeta compartida
 
-En la lista Plugins del menú de Allkin, **Carpeta compartida** abre `~/.allkin/share`, común a
-todos los agentes y todos los plugins: todos leen, escriben, añaden y eliminan allí. La misma
-página que los archivos de un agente, sin ejecución de scripts. Una carpeta con el nombre de un
-plugin instalado es suya: su contenido puede cambiar, la carpeta en sí se queda. Copiar o cortar
+En la lista Herramientas del menú de Allkin, **Carpeta compartida** abre `~/.allkin/share`, común a
+todos los agentes y todas las herramientas: todos leen, escriben, añaden y eliminan allí. La misma
+página que los archivos de un agente, sin ejecución de scripts. Una carpeta con el nombre de una
+herramienta instalada es suya: su contenido puede cambiar, la carpeta en sí se queda. Copiar o cortar
 en los archivos de un agente y pegar en la carpeta compartida (o al revés) pasa de uno a otro.
 
 ## Explorador de `~/.allkin`
@@ -52,7 +52,7 @@ se descargan.
 
 Clic derecho en un elemento: Abrir, Descargar, Copiar la ruta.
 
-## Sin este plugin
+## Sin esta herramienta
 
 Ya no hay pestaña Archivos ni explorador: desaparecen el botón de carpeta de los agentes y el
 botón «Explorador» de la página de inicio. Los agentes, por su parte, conservan el acceso a sus
@@ -60,4 +60,4 @@ archivos según sus permisos.
 
 ## Permiso solicitado
 
-- **Interfaz de Allkin**: el plugin se ejecuta en la página de Allkin, con tu sesión.
+- **Interfaz de Allkin**: la herramienta se ejecuta en la página de Allkin, con tu sesión.

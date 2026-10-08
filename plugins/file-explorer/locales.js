@@ -15,7 +15,7 @@ window.Allkin.i18n.register("en", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Files — {name}",
   "plugin.file-explorer.share.name": "Shared folder",
-  "plugin.file-explorer.share.meta": "Common to every agent and plugin",
+  "plugin.file-explorer.share.meta": "Common to every agent and tool",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Upload files",
   "plugin.file-explorer.new.folder": "New folder",
@@ -175,7 +175,7 @@ window.Allkin.i18n.register("fr", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Fichiers — {name}",
   "plugin.file-explorer.share.name": "Dossier partagé",
-  "plugin.file-explorer.share.meta": "Commun à tous les agents et plugins",
+  "plugin.file-explorer.share.meta": "Commun à tous les agents et outils",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Déposer des fichiers",
   "plugin.file-explorer.new.folder": "Nouveau dossier",
@@ -335,7 +335,7 @@ window.Allkin.i18n.register("es", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Archivos: {name}",
   "plugin.file-explorer.share.name": "Carpeta compartida",
-  "plugin.file-explorer.share.meta": "Común a todos los agentes y plugins",
+  "plugin.file-explorer.share.meta": "Común a todos los agentes y herramientas",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Subir archivos",
   "plugin.file-explorer.new.folder": "Nueva carpeta",
@@ -495,7 +495,7 @@ window.Allkin.i18n.register("de", {
   // Tabs
   "plugin.file-explorer.tab.files.tooltip": "Dateien – {name}",
   "plugin.file-explorer.share.name": "Freigegebener Ordner",
-  "plugin.file-explorer.share.meta": "Gemeinsam für alle Agenten und Plugins",
+  "plugin.file-explorer.share.meta": "Gemeinsam für alle Agenten und Tools",
   // Header: buttons, sorting, filter
   "plugin.file-explorer.upload.button": "Dateien hochladen",
   "plugin.file-explorer.new.folder": "Neuer Ordner",

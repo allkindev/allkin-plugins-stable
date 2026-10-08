@@ -13,7 +13,7 @@ l'affiche dans un onglet d'Allkin. Pratique depuis un téléphone ou un poste sa
 
 Au **premier démarrage**, WeTTY est téléchargé depuis npm et son module natif `node-pty` est
 compilé pour la machine : comptez de dix secondes à une minute. Le journal du service montre
-l'avancement ; tant que ce n'est pas fini, la page répond « le plugin ne répond pas » —
+l'avancement ; tant que ce n'est pas fini, la page répond « l'outil ne répond pas » —
 rechargez-la ensuite. Les démarrages suivants sont immédiats.
 
 ## Pourquoi SSH, même vers la machine locale
@@ -43,7 +43,7 @@ accepter l'authentification choisie (`sudo apt install openssh-server` sur Debia
 
 ## Détails
 
-- WeTTY est installé dans le dossier de données du plugin (`runtime/`), conservé lors des mises à
-  jour du plugin. Supprimer ce dossier force une réinstallation au démarrage suivant.
+- WeTTY est installé dans le dossier de données de l'outil (`runtime/`), conservé lors des mises à
+  jour de l'outil. Supprimer ce dossier force une réinstallation au démarrage suivant.
 - La page est servie sous `/plugins/wetty/web` (option `--base`) et relayée par Allkin, WebSocket
   compris : elle n'est jamais exposée directement sur le réseau.

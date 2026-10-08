@@ -69,9 +69,9 @@ since* — an orange dot also shows it on the tab.
   with your session: it creates the test agent and, when you ask for it, the
   final agent.
 - **Dedicated agent** — Allkin creates the agent “Promptr”, with no rights on
-  the machine nor on the other agents. Its role is supplied by the plugin
+  the machine nor on the other agents. Its role is supplied by the tool
   (`agent.md`) and restored at every update; its model stays adjustable on its
-  Agent page. It disappears with the plugin. Every generation or analysis
+  Agent page. It disappears with the tool. Every generation or analysis
   uses your AI provider.
 
 The current plan is kept in this browser.

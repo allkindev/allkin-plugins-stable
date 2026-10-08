@@ -26,14 +26,14 @@ HTML/XML, CSS/SCSS, shell, PowerShell, Dockerfile, Makefile, Nginx, LaTeX…), b
 ## Markdown, images, PDF
 
 - **Markdown** opens formatted; “Edit” switches to the Markdown editor if the *Markdown editor*
-  plugin is installed, to the code editor otherwise. The images and files added to it are stored
+  tool is installed, to the code editor otherwise. The images and files added to it are stored
   next to the document, in `images/` and `fichiers/`.
 - **Images and PDF**: a plain viewer.
 - Copy the content or the path, download the file.
 
 Up to six files open per agent: beyond that, the oldest one is closed (after saving).
 
-## For other plugins
+## For other tools
 
 The `code-highlight` capability: `highlight(text, language)`, `languageForFilename(name)`,
 `languages()`. The explorer uses it to show a script before running it.
@@ -41,10 +41,10 @@ The `code-highlight` capability: `highlight(text, language)`, `languageForFilena
 `hljs.js` is built from `node_modules/highlight.js` of the allkin repository by
 `scripts/hljs-entry.mjs` (the command is at the top of the file).
 
-## Without this plugin
+## Without this tool
 
 No file tab any more: clicking a file in the explorer downloads it.
 
 ## Right requested
 
-- **Allkin interface** — the plugin runs inside the Allkin page, with your session.
+- **Allkin interface** — the tool runs inside the Allkin page, with your session.

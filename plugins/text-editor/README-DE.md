@@ -26,7 +26,7 @@ HTML/XML, CSS/SCSS, Shell, PowerShell, Dockerfile, Makefile, Nginx, LaTeX…), d
 ## Markdown, Bilder, PDF
 
 - **Markdown** wird formatiert geöffnet; „Bearbeiten“ wechselt in den Markdown-Editor, wenn das
-  Plugin *Markdown-Editor* installiert ist, sonst in den Code-Editor. Bilder und Dateien, die
+  Tool *Markdown-Editor* installiert ist, sonst in den Code-Editor. Bilder und Dateien, die
   man dort hinzufügt, werden neben dem Dokument abgelegt, in `images/` und `fichiers/`.
 - **Bilder und PDF**: ein einfacher Betrachter.
 - Inhalt oder Pfad kopieren, Datei herunterladen.
@@ -34,7 +34,7 @@ HTML/XML, CSS/SCSS, Shell, PowerShell, Dockerfile, Makefile, Nginx, LaTeX…), d
 Bis zu sechs geöffnete Dateien pro Agent: darüber hinaus wird die älteste geschlossen (nach dem
 Speichern).
 
-## Für die anderen Plugins
+## Für die anderen Tools
 
 Die Fähigkeit `code-highlight`: `highlight(text, sprache)`, `languageForFilename(name)`,
 `languages()`. Der Explorer nutzt sie, um ein Skript zu zeigen, bevor er es ausführt.
@@ -42,10 +42,10 @@ Die Fähigkeit `code-highlight`: `highlight(text, sprache)`, `languageForFilenam
 `hljs.js` wird aus `node_modules/highlight.js` des Repositorys allkin mit
 `scripts/hljs-entry.mjs` gebaut (der Befehl steht am Anfang der Datei).
 
-## Ohne dieses Plugin
+## Ohne dieses Tool
 
 Kein Datei-Tab mehr: Ein Klick auf eine Datei im Explorer lädt sie herunter.
 
 ## Angefordertes Recht
 
-- **Allkin-Oberfläche** – das Plugin läuft in der Allkin-Seite, mit deiner Sitzung.
+- **Allkin-Oberfläche** – das Tool läuft in der Allkin-Seite, mit deiner Sitzung.

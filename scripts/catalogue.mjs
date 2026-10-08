@@ -64,7 +64,7 @@ const MAX_FILE_BYTES = 20 * 1024 * 1024;
      stable        only what the owner of Allkin has validated;
      experimental  only what is still pending.
    A plugin moves from the second to the first when it is validated — see
-   git_validate_plugin.sh. The script refuses a plugin sitting in the wrong one:
+   git_validate_tool.sh. The script refuses a plugin sitting in the wrong one:
    the repository a plugin is in IS its status, the two must never disagree. */
 const CHANNEL = (() => {
   try {
@@ -83,7 +83,7 @@ function checkChannel(where, validation) {
   if (CHANNEL === "stable" && validation.status !== "validated") {
     errors.push(`${where} : non validé — sa place est dans le dépôt expérimental.`);
   } else if (CHANNEL === "experimental" && validation.status === "validated") {
-    errors.push(`${where} : validé — sa place est dans le dépôt stable (git_validate_plugin.sh).`);
+    errors.push(`${where} : validé — sa place est dans le dépôt stable (git_validate_tool.sh).`);
   }
 }
 const fail = (id, message) => errors.push(`plugins/${id} : ${message}`);
@@ -250,19 +250,103 @@ const services = existsSync(SERVICES_DIR)
       .filter(Boolean)
   : [];
 
+/* Skills (see SKILL-STANDARD.md): a folder skills/<id>/ holding a standard
+   SKILL.md (header `name` / `description`, then the procedure), Allkin's own
+   skill.json (version 1.0.N, author, icon, translations) and its README files.
+   Listed with its files and their digests, like a plugin: Allkin downloads
+   them one by one. The user reads a skill as a "competence". */
+const SKILLS_DIR = join(ROOT, "skills");
+
+/** The two keys of the SKILL.md header, one per line each; null when the header is missing. */
+function readSkillHeader(text) {
+  const lines = text.split(/\r?\n/);
+  if (lines[0]?.trim() !== "---") return null;
+  const end = lines.findIndex((line, index) => index > 0 && line.trim() === "---");
+  if (end < 0) return null;
+  const fields = {};
+  for (const line of lines.slice(1, end)) {
+    const match = /^([A-Za-z][\w-]*):\s*(.*)$/.exec(line);
+    if (match) fields[match[1]] = match[2].trim().replace(/^(["'])(.*)\1$/, "$2");
+  }
+  return { ...fields, body: lines.slice(end + 1).join("\n").trim() };
+}
+
+function readSkill(id) {
+  const dir = join(SKILLS_DIR, id);
+  const failSkill = (message) => errors.push(`skills/${id} : ${message}`);
+  if (!ID_PATTERN.test(id)) return failSkill("nom de dossier : minuscules, chiffres et tirets.");
+  if (!existsSync(join(dir, "SKILL.md"))) return failSkill("SKILL.md est absent.");
+  if (!existsSync(join(dir, "skill.json"))) return failSkill("skill.json est absent (version 1.0.N, auteur, traductions).");
+  if (!existsSync(join(dir, "README.md"))) return failSkill("README.md est absent — l'aide est obligatoire.");
+  const header = readSkillHeader(readFileSync(join(dir, "SKILL.md"), "utf-8"));
+  if (!header) return failSkill("SKILL.md doit commencer par un en-tête entre deux lignes « --- ».");
+  if (header.name !== id) failSkill(`l'en-tête de SKILL.md dit name: ${header.name ?? "(absent)"} — attendu ${id}, le nom du dossier.`);
+  if (!header.description) failSkill("l'en-tête de SKILL.md doit donner description:, sur une ligne.");
+  if (!header.body) warnings.push(`skills/${id} : SKILL.md n'a pas de corps après son en-tête.`);
+  if (header["allowed-tools"]) warnings.push(`skills/${id} : allowed-tools est ignoré par Allkin (une compétence n'élargit aucun droit).`);
+  let m;
+  try {
+    m = JSON.parse(readFileSync(join(dir, "skill.json"), "utf-8"));
+  } catch (err) {
+    return failSkill(`skill.json n'est pas un JSON valide (${err.message}).`);
+  }
+  if (!VERSION_PATTERN.test(String(m.version ?? ""))) failSkill("skill.json : version attendue 1.0.N (1.0.0, 1.0.1, 1.0.12…).");
+  const files = listFiles(dir).map(({ path, st }) => {
+    if (!path.split("/").every((s) => SEGMENT_PATTERN.test(s))) failSkill(`nom de fichier refusé par Allkin : ${path}`);
+    if (st.size > MAX_FILE_BYTES) failSkill(`${path} dépasse 20 Mo.`);
+    return {
+      path,
+      size: st.size,
+      sha256: createHash("sha256").update(readFileSync(join(dir, path))).digest("hex"),
+      ...(st.mode & 0o100 ? { executable: true } : {}),
+    };
+  });
+  if (files.length > MAX_FILES) failSkill(`plus de ${MAX_FILES} fichiers.`);
+  const icon = ["icon.svg", "icon.png", "icon.webp", "icon.jpg"].find((f) => files.some((x) => x.path === f));
+  const locales = {};
+  for (const [language, l] of Object.entries(m.locales && typeof m.locales === "object" ? m.locales : {})) {
+    if (!/^[a-z]{2}$/.test(language) || !l || typeof l !== "object") continue;
+    locales[language] = {
+      ...(typeof l.name === "string" ? { name: l.name } : {}),
+      ...(typeof l.description === "string" ? { description: l.description } : {}),
+    };
+  }
+  checkChannel(`skills/${id}`, readValidation(dir));
+  return {
+    id,
+    name: header.name ?? id,
+    version: m.version,
+    description: header.description ?? "",
+    ...(m.author ? { author: m.author } : {}),
+    ...(m.homepage ? { homepage: m.homepage } : {}),
+    ...(icon ? { icon } : {}),
+    validation: readValidation(dir),
+    ...(Object.keys(locales).length ? { locales } : {}),
+    files,
+  };
+}
+
+const skills = existsSync(SKILLS_DIR)
+  ? readdirSync(SKILLS_DIR)
+      .filter((name) => statSync(join(SKILLS_DIR, name)).isDirectory())
+      .sort()
+      .map(readSkill)
+      .filter(Boolean)
+  : [];
+
 for (const w of warnings) console.warn(`attention  ${w}`);
 if (errors.length) {
   for (const e of errors) console.error(`erreur     ${e}`);
   process.exit(1);
 }
 
-// `services` only when the repository holds some: a catalogue without them
-// stays byte for byte what it was.
+// `services` and `skills` only when the repository holds some: a catalogue
+// without them stays byte for byte what it was.
 if (!CHANNEL) {
   console.error('erreur     channel.json absent ou illisible : { "channel": "stable" } ou { "channel": "experimental" }.');
   process.exit(1);
 }
-const content = JSON.stringify({ schemaVersion: 1, channel: CHANNEL, plugins, ...(services.length ? { services } : {}) }, null, 2) + "\n";
+const content = JSON.stringify({ schemaVersion: 1, channel: CHANNEL, plugins, ...(services.length ? { services } : {}), ...(skills.length ? { skills } : {}) }, null, 2) + "\n";
 if (process.argv.includes("--check")) {
   const current = existsSync(CATALOGUE_PATH) ? readFileSync(CATALOGUE_PATH, "utf-8") : "";
   if (current !== content) {

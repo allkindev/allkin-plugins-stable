@@ -9,7 +9,7 @@ Markdown.
 - **Missions** — the text of each card.
 - **Role of an agent** — the “Role” section of its page, and the writing of the role in the agent
   creation assistant.
-- **`.md` files** — with the *Text editor* plugin, which uses it for Markdown files.
+- **`.md` files** — with the *Text editor* tool, which uses it for Markdown files.
 
 ## The toolbar
 
@@ -78,14 +78,14 @@ Only the blocks you change are rewritten: fixing a word does not reformat the re
 document. The **Raw Markdown** button shows the exact text of the file, and lets you fix it by
 hand.
 
-## Without this plugin
+## Without this tool
 
 These editors are gone: no missions, no “Role” section (the `CLAUDE.md` of an agent stays in
 place and keeps being used, it simply cannot be changed from the interface any more), and
 `.md` files open as raw text. The display of the agents' messages does not depend on this
-plugin.
+tool.
 
-## For other plugins
+## For other tools
 
 ```js
 const editor = Allkin.capability("markdown-editor").create({
@@ -103,4 +103,4 @@ editor.render();   // then reload(), focus("start" | "end"), isFocused(), destro
 
 ## Right requested
 
-- **Allkin's interface** — the plugin runs in Allkin's page, with your session.
+- **Allkin's interface** — the tool runs in Allkin's page, with your session.

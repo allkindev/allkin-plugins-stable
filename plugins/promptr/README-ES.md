@@ -70,9 +70,9 @@ desde entonces*; una marca naranja también lo señala en la pestaña.
 - **Interfaz de Allkin**: la app Promptr se añade a la página de Allkin y actúa
   con tu sesión: crea el agente de prueba y, cuando lo pides, el agente final.
 - **Agente dedicado**: Allkin crea el agente «Promptr», sin ningún permiso
-  sobre la máquina ni sobre los demás agentes. Su rol lo proporciona el plugin
+  sobre la máquina ni sobre los demás agentes. Su rol lo proporciona la herramienta
   (`agent.md`) y se restablece en cada actualización; su modelo sigue siendo
-  ajustable en su página Agente. Desaparece con el plugin. Cada generación o
+  ajustable en su página Agente. Desaparece con la herramienta. Cada generación o
   análisis consume tu proveedor de IA.
 
 El plan en curso se guarda en este navegador.

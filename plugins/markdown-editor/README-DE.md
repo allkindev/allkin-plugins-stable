@@ -9,7 +9,7 @@ Bildschirm. Die Datei selbst bleibt gewöhnliches Markdown.
 - **Missionen** – der Text jeder Karte.
 - **Rolle eines Agenten** – der Abschnitt „Rolle“ seiner Seite und das Schreiben der Rolle im
   Assistenten zum Erstellen eines Agenten.
-- **`.md`-Dateien** – mit dem Plugin *Texteditor*, das ihn für Markdown-Dateien verwendet.
+- **`.md`-Dateien** – mit dem Tool *Texteditor*, das ihn für Markdown-Dateien verwendet.
 
 ## Die Werkzeugleiste
 
@@ -80,14 +80,14 @@ Nur die Blöcke, die du änderst, werden neu geschrieben: Ein Wort zu korrigiere
 des Dokuments nicht um. Die Schaltfläche **Markdown-Quelltext** zeigt den genauen Text der Datei
 und lässt dich ihn von Hand korrigieren.
 
-## Ohne dieses Plugin
+## Ohne dieses Tool
 
 Diese Bearbeitungen gibt es dann nicht mehr: weder Missionen noch den Abschnitt „Rolle“ (die
 `CLAUDE.md` eines Agenten bleibt an ihrem Platz und wird weiter verwendet, sie lässt sich nur nicht
 mehr über die Oberfläche ändern), und `.md`-Dateien öffnen sich als reiner Text. Die Anzeige der
-Nachrichten der Agenten hängt nicht von diesem Plugin ab.
+Nachrichten der Agenten hängt nicht von diesem Tool ab.
 
-## Für die anderen Plugins
+## Für die anderen Tools
 
 ```js
 const editor = Allkin.capability("markdown-editor").create({
@@ -105,4 +105,4 @@ editor.render();   // dann reload(), focus("start" | "end"), isFocused(), destro
 
 ## Angefordertes Recht
 
-- **Oberfläche von Allkin** – das Plugin läuft in der Seite von Allkin, mit deiner Sitzung.
+- **Oberfläche von Allkin** – das Tool läuft in der Seite von Allkin, mit deiner Sitzung.

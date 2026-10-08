@@ -24,7 +24,7 @@ HTML/XML, CSS/SCSS, shell, PowerShell, Dockerfile, Makefile, Nginx, LaTeX…), p
 
 ## Markdown, images, PDF
 
-- **Markdown** s'ouvre mis en forme ; « Éditer » passe dans l'éditeur markdown si le plugin
+- **Markdown** s'ouvre mis en forme ; « Éditer » passe dans l'éditeur markdown si l'outil
   *Éditeur markdown* est installé, dans l'éditeur de code sinon. Les images et fichiers qu'on y
   ajoute sont rangés à côté du document, dans `images/` et `fichiers/`.
 - **Images et PDF** : simple visionneuse.
@@ -32,7 +32,7 @@ HTML/XML, CSS/SCSS, shell, PowerShell, Dockerfile, Makefile, Nginx, LaTeX…), p
 
 Jusqu'à six fichiers ouverts par agent : au-delà, le plus ancien est fermé (après enregistrement).
 
-## Pour les autres plugins
+## Pour les autres outils
 
 La capacité `code-highlight` : `highlight(texte, langage)`, `languageForFilename(nom)`,
 `languages()`. L'explorateur s'en sert pour montrer un script avant de l'exécuter.
@@ -40,10 +40,10 @@ La capacité `code-highlight` : `highlight(texte, langage)`, `languageForFilenam
 `hljs.js` est construit depuis `node_modules/highlight.js` du dépôt allkin par
 `scripts/hljs-entry.mjs` (la commande est en tête du fichier).
 
-## Sans ce plugin
+## Sans cet outil
 
 Plus d'onglet fichier : cliquer sur un fichier dans l'explorateur le télécharge.
 
 ## Droit demandé
 
-- **Interface d'Allkin** — le plugin s'exécute dans la page d'Allkin, avec ta session.
+- **Interface d'Allkin** — l'outil s'exécute dans la page d'Allkin, avec ta session.

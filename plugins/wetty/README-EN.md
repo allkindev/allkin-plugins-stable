@@ -13,7 +13,7 @@ shows it in an Allkin tab. Handy from a phone or from a computer without an SSH 
 
 On the **first start**, WeTTY is downloaded from npm and its native module `node-pty` is compiled
 for the machine: allow ten seconds to a minute. The service log shows the progress; until it is
-done, the page answers “The plugin does not answer” — reload it afterwards. The following starts
+done, the page answers “The tool does not answer” — reload it afterwards. The following starts
 are immediate.
 
 ## Why SSH, even to the local machine
@@ -43,7 +43,7 @@ the chosen authentication (`sudo apt install openssh-server` on Debian/Ubuntu).
 
 ## Details
 
-- WeTTY is installed in the plugin's data folder (`runtime/`), kept across updates of the plugin.
+- WeTTY is installed in the tool's data folder (`runtime/`), kept across updates of the tool.
   Deleting this folder forces a reinstallation at the next start.
 - The page is served under `/plugins/wetty/web` (option `--base`) and relayed by Allkin, WebSocket
   included: it is never exposed directly on the network.

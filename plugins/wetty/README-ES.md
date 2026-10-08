@@ -13,7 +13,7 @@ muestra en una pestaña de Allkin. Práctico desde un teléfono o un equipo sin 
 
 En el **primer inicio**, WeTTY se descarga desde npm y su módulo nativo `node-pty` se compila
 para la máquina: cuenta de diez segundos a un minuto. El registro del servicio muestra el
-avance; mientras no haya terminado, la página responde «El plugin no responde»: recárgala
+avance; mientras no haya terminado, la página responde «La herramienta no responde»: recárgala
 después. Los inicios siguientes son inmediatos.
 
 ## Por qué SSH, incluso hacia la máquina local
@@ -44,7 +44,7 @@ instalado y aceptar la autenticación elegida (`sudo apt install openssh-server`
 
 ## Detalles
 
-- WeTTY se instala en la carpeta de datos del plugin (`runtime/`), que se conserva en las
-  actualizaciones del plugin. Eliminar esta carpeta fuerza una reinstalación en el siguiente inicio.
+- WeTTY se instala en la carpeta de datos de la herramienta (`runtime/`), que se conserva en las
+  actualizaciones de la herramienta. Eliminar esta carpeta fuerza una reinstalación en el siguiente inicio.
 - La página se sirve bajo `/plugins/wetty/web` (opción `--base`) y Allkin la retransmite,
   WebSocket incluido: nunca queda expuesta directamente en la red.

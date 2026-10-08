@@ -1,6 +1,6 @@
 {
   "name": "Promptr",
-  "version": "1.0.5",
+  "version": "1.0.6",
   "description": "L'atelier de prompts : dessinez un agent en blocs, ou ouvrez un prompt existant pour le voir en plan. Son agent dédié écrit le prompt depuis le plan, et le plan depuis un prompt.",
   "author": "Allkin",
   "permissions": [
@@ -9,7 +9,7 @@
   ],
   "agent": {
     "name": "Promptr",
-    "description": "L'agent du plugin Promptr : écrit les prompts depuis un plan, et l'inverse.",
+    "description": "L'agent de l'outil Promptr : écrit les prompts depuis un plan, et l'inverse.",
     "prompt": "agent.md"
   },
   "ui": {

@@ -75,9 +75,9 @@ sich seitdem geändert* – ein orangefarbener Punkt am Tab zeigt es ebenfalls a
   hinzugefügt und handelt mit deiner Sitzung: Sie erstellt den Testagenten und,
   wenn du es verlangst, den endgültigen Agenten.
 - **Eigener Agent** – Allkin erstellt den Agenten „Promptr“, ohne Rechte auf
-  der Maschine oder auf den anderen Agenten. Seine Rolle liefert das Plugin
+  der Maschine oder auf den anderen Agenten. Seine Rolle liefert das Tool
   (`agent.md`), und sie wird bei jedem Update wiederhergestellt; sein Modell
-  bleibt auf seiner Agentenseite einstellbar. Er verschwindet mit dem Plugin.
+  bleibt auf seiner Agentenseite einstellbar. Er verschwindet mit dem Tool.
   Jede Erzeugung oder Analyse verbraucht deinen KI-Anbieter.
 
 Der aktuelle Plan wird in diesem Browser gespeichert.

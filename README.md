@@ -1,64 +1,67 @@
-# allkin-plugins-stable
+# allkin-tools-stable
 
-Les **plugins validés** d'[Allkin](https://github.com/allkindev/allkin).
+Les **outils validés** d'[Allkin](https://github.com/allkindev/allkin).
+
+Dans Allkin, ce que ce dépôt contient s'appelle un **outil** (*tool*, *herramienta*, *Tool*) ; le
+nom technique reste *plugin* : `plugin.json`, le dossier `plugins/<id>/`, les clés et le code.
 
 Allkin lit deux dépôts :
 
 | Dépôt | Contenu |
 |-------|---------|
-| **allkin-plugins-stable** (celui-ci) | ce que le propriétaire d'Allkin a vérifié |
-| [allkin-plugins-experimental](https://github.com/allkindev/allkin-plugins-experimental) | ce qui n'est pas encore validé : utilisable par tous, sans garantie de fonctionnement |
+| **allkin-tools-stable** (celui-ci) | ce que le propriétaire d'Allkin a vérifié |
+| [allkin-tools-experimental](https://github.com/allkindev/allkin-tools-experimental) | ce qui n'est pas encore validé : utilisable par tous, sans garantie de fonctionnement |
 
-Un plugin naît dans le dépôt expérimental et **y reste tant qu'il n'est pas validé**. Une fois
-vérifié, il passe ici (`git_validate_plugin.sh <id>`). Le dépôt où se trouve un plugin **est** son
-statut : `scripts/catalogue.mjs` refuse un plugin non validé ici, et un plugin validé là-bas.
+Un outil naît dans le dépôt expérimental et **y reste tant qu'il n'est pas validé**. Une fois
+vérifié, il passe ici (`git_validate_tool.sh <id>`). Le dépôt où se trouve un outil **est** son
+statut : `scripts/catalogue.mjs` refuse un outil non validé ici, et un outil validé là-bas.
 
-Depuis Allkin, l'icône **Plugins** en bas de la barre latérale lit ce dépôt et affiche les plugins
-disponibles ; on installe ceux qu'on veut utiliser. Un plugin installé ne fait rien tout seul : ses
+Depuis Allkin, l'icône **Outils** en bas de la barre latérale lit ce dépôt et affiche les outils
+disponibles ; on installe ceux qu'on veut utiliser. Un outil installé ne fait rien tout seul : ses
 droits s'accordent un par un sur sa page, et son service ne démarre que si on l'autorise.
 
-Pour en écrire un : **[Créer un plugin](CREER-UN-PLUGIN.md)** — exemple complet, test en local,
+Pour en écrire un : **[Créer un outil](CREER-UN-PLUGIN.md)** — exemple complet, test en local,
 publication et pièges connus.
 
-**Le standard** — les règles que suit tout plugin et tout service, vérifiées par Allkin :
-[PLUGIN-STANDARD.md](https://github.com/allkindev/allkin-plugins-experimental/blob/main/plugins/creator/standard/PLUGIN-STANDARD.md) et
-[SERVICE-STANDARD.md](https://github.com/allkindev/allkin-plugins-experimental/blob/main/plugins/creator/standard/SERVICE-STANDARD.md). Ils sont livrés avec le plugin
-**Creator**, dont l'agent écrit plugins et services en conversation et dont l'établi les contrôle
+**Le standard** — les règles que suit tout outil et tout service, vérifiées par Allkin :
+[PLUGIN-STANDARD.md](https://github.com/allkindev/allkin-tools-experimental/blob/main/plugins/creator/standard/PLUGIN-STANDARD.md) et
+[SERVICE-STANDARD.md](https://github.com/allkindev/allkin-tools-experimental/blob/main/plugins/creator/standard/SERVICE-STANDARD.md). Ils sont livrés avec l'outil
+**Creator**, dont l'agent écrit outils et services en conversation et dont l'établi les contrôle
 contre ce standard.
 
 Les deux dépôts peuvent aussi porter des **services** (`services/<id>/service.json`, voir le standard) :
 `scripts/catalogue.mjs` les inscrit dans `catalogue.json`, et tout Allkin les propose dans sa page
 Services — avec la même règle : en attente dans l'expérimental, validé ici.
 
-Un Allkin lit ces deux dépôts (l'expérimental se désactive), et ceux qu'on lui ajoute : bouton **Dépôts** des pages Plugins et Services
+Un Allkin lit ces deux dépôts (l'expérimental se désactive), et ceux qu'on lui ajoute : bouton **Dépôts** des pages Outils et Services
 — une adresse (`https://…`, avec son `catalogue.json`) ou un **dossier local**, lu en direct sans
 catalogue à régénérer.
 
 ---
 
-## Structure d'un plugin
+## Structure d'un outil
 
 ```
 plugins/<id>/
 ├── plugin.json    obligatoire — nom, version, droits, réglages, service, page web
 ├── README.md      obligatoire — la page Documentation, lisible avant installation
 ├── icon.svg       facultatif  — la vignette (icon.png / icon.webp acceptés)
-└── …              le code du plugin
+└── …              le code de l'outil
 ```
 
-Le nom du dossier est l'identifiant du plugin : il ne change jamais.
+Le nom du dossier est l'identifiant de l'outil : il ne change jamais.
 
 ## `plugin.json`
 
 ```jsonc
 {
-  "name": "Mon plugin",
-  "version": "1.0.0",                  // à changer à chaque modification (voir git_commit_plugins.sh)
+  "name": "Mon outil",
+  "version": "1.0.0",                  // à changer à chaque modification (voir git_commit_tools.sh)
   "description": "Une phrase.",
   "author": "Moi",
   "homepage": "https://…",             // facultatif
   "permissions": [                     // ce que l'utilisateur devra accorder
-    { "id": "network", "reason": "Pourquoi le plugin en a besoin" }
+    { "id": "network", "reason": "Pourquoi l'outil en a besoin" }
   ],
   "settings": [                        // la page Configuration
     { "key": "port", "label": "Port", "type": "number", "default": 9301, "required": true, "help": "…" }
@@ -69,28 +72,28 @@ Le nom du dossier est l'identifiant du plugin : il ne change jamais.
 ```
 
 - **permissions** — `network`, `filesystem`, `exec`, `root`, `agents`, `interface`, `agent`, `repository`, ou
-  un identifiant propre au plugin (affiché à risque élevé). Le service ne démarre pas tant que chacun n'est pas accordé ;
+  un identifiant propre à l'outil (affiché à risque élevé). Le service ne démarre pas tant que chacun n'est pas accordé ;
   un droit ajouté dans une nouvelle version n'est jamais accordé d'office.
 - **settings** — types `text`, `textarea`, `number`, `boolean`, `secret`, `select` (avec
   `options`), `service`. Un `secret` n'est jamais renvoyé au navigateur. A `service` setting
   (`"type": "service", "capability": "speech"`) lists the connected services of Allkin able to do
-  that; the plugin receives the identifier of the chosen one, never its key — see
+  that; the tool receives the identifier of the chosen one, never its key — see
   [Using a service of Allkin](#using-a-service-of-allkin).
-- **requires** — optional: `"requires": ["markdown-editor"]` names the plugins this one cannot work
+- **requires** — optional: `"requires": ["markdown-editor"]` names the tools this one cannot work
   without. Allkin installs those missing at the same time, after telling the user; each gets its
-  rights on its own page, like any plugin.
-- **service** — lancé sans shell, dans le dossier du plugin. `node` désigne le Node d'Allkin ;
-  une commande en `./` est un fichier du plugin (le rendre exécutable dans le dépôt).
+  rights on its own page, like any tool.
+- **service** — lancé sans shell, dans le dossier de l'outil. `node` désigne le Node d'Allkin ;
+  une commande en `./` est un fichier de l'outil (le rendre exécutable dans le dépôt).
 - **web** — suppose un service. `port` fixe ou `portSetting` (un réglage `number`). La page
   s'ouvre dans un onglet d'Allkin, relayée sous `/plugins/<id>/web/`.
   `keepPrefix: true` transmet le chemin complet au lieu de retirer le préfixe : pour les
   applications qui savent servir sous un chemin de base (`--base`, `BASE_URL`…) et écrivent
   leurs liens en absolu. Elles reçoivent ce chemin dans `ALLKIN_PLUGIN_BASE_PATH`.
 
-## Plugins d'interface
+## Outils d'interface
 
-Un plugin peut apporter une partie de l'interface d'Allkin elle-même — c'est le cas de
-`file-explorer`, `text-editor` et `markdown-editor`, livrés avec Allkin. Il déclare une section `ui`
+Un outil peut apporter une partie de l'interface d'Allkin elle-même — c'est le cas de
+`file-explorer`, `text-editor` et `markdown-editor`, outils intégrés d'Allkin. Il déclare une section `ui`
 et le droit `interface` :
 
 ```jsonc
@@ -116,16 +119,16 @@ Les scripts s'adressent à `window.Allkin` :
 | `registerTabKind(kind, def)` | Déclare une nature d'onglet : `panels`, `icon`, `label(tab)`, `meta`, `tooltip(tab)`, `byPath`, `maxPerAgent`, `scroller()`, `scrollKeySuffix(tab)`, `activate(tab)`, `leave(tab)`, `beforeClose(tab)`, `menu: { title, onShow }` |
 | `provide(name, impl)` / `capability(name)` | Fournit / utilise une capacité (`markdown-editor`, `text-editor`, `file-explorer`) |
 | `hasTabKind(kind)` | Une nature d'onglet est-elle disponible |
-| `registerApp({ key, name, meta, icon, open })` | Ajoute une entrée à la liste Plugins du menu Allkin |
+| `registerApp({ key, name, meta, icon, open })` | Ajoute une entrée à la liste Outils du menu Allkin |
 | `core` | Le cœur : `state`, `el`, `api`, `openTab`, `activeTab`, `persistTabs`, `applyScroll`, `copyToClipboard`, `formatSize`, `dataFileUrl`, `agentName`, `toast(message, "ok" \| "ko")`, `runPluginAgent(id, prompt)`… |
 
 Un script s'enveloppe dans une fonction (`(() => { … })();`) : tous les scripts de la page partagent
-la même portée globale. Activer ou retirer un plugin d'interface demande de recharger la page.
+la même portée globale. Activer ou retirer un outil d'interface demande de recharger la page.
 
-## Un plugin, un agent
+## Un outil, un agent
 
-Un plugin peut disposer de **son propre agent** : Allkin le crée, le tient à jour et le retire
-avec le plugin. Il déclare une section `agent` et le droit `agent` :
+Un outil peut disposer de **son propre agent** : Allkin le crée, le tient à jour et le retire
+avec l'outil. Il déclare une section `agent` et le droit `agent` :
 
 ```jsonc
 {
@@ -142,20 +145,20 @@ avec le plugin. Il déclare une section `agent` et le droit `agent` :
 }
 ```
 
-`repository` suppose `agent.workspace` : les plugins (`plugins/<id>/`) et services
+`repository` suppose `agent.workspace` : les outils (`plugins/<id>/`) et services
 (`services/<id>/`) écrits dans le dossier de travail apparaissent dans les galeries de cet Allkin
-et s'installent depuis là. Le dossier survit à la désinstallation du plugin. C'est le mécanisme de
+et s'installent depuis là. Le dossier survit à la désinstallation de l'outil. C'est le mécanisme de
 **Creator**.
 
-- L'agent naît dès que **tous les droits** du plugin sont accordés. Son identifiant est
+- L'agent naît dès que **tous les droits** de l'outil sont accordés. Son identifiant est
   `plugin-<id>` ; son nom est en rose dans la liste des agents.
 - **Aucun droit** : ni commandes, ni fichiers hors de son dossier, ni web, ni autres agents. Personne
   ne peut lui en donner, et les autres agents ne peuvent pas le solliciter.
-- Son **rôle appartient au plugin** : `prompt` est rétabli à chaque mise à jour, et ne se modifie pas
+- Son **rôle appartient à l'outil** : `prompt` est rétabli à chaque mise à jour, et ne se modifie pas
   depuis Allkin. Son modèle et sa description restent réglables sur sa page Agent.
-- Il ne se supprime pas à la main : il part avec le plugin, à la désinstallation.
+- Il ne se supprime pas à la main : il part avec l'outil, à la désinstallation.
 
-L'interface du plugin lui confie une tâche et reçoit le texte complet de sa réponse :
+L'interface de l'outil lui confie une tâche et reçoit le texte complet de sa réponse :
 
 ```js
 const text = await Allkin.core.runPluginAgent("mon-plugin", "TÂCHE : …");
@@ -169,16 +172,16 @@ minutes (5 au plus). Le rôle de l'agent doit donc dire exactement quoi rendre, 
 
 ## Using a service of Allkin
 
-A plugin does not ask for the key of an external service: the user connects the service once in
-**Services**, and the plugin names what it needs with a setting of type `service`:
+A tool does not ask for the key of an external service: the user connects the service once in
+**Services**, and the tool names what it needs with a setting of type `service`:
 
 ```json
 { "key": "audioService", "label": "Service audio", "type": "service", "capability": "speech", "required": true }
 ```
 
-The plugin's page shows the connected services that have this capability (`speech`: real-time
+The tool's page shows the connected services that have this capability (`speech`: real-time
 transcription, Soniox today; `image`: image generation). Allkin then does the part that needs the
-key. For speech, the plugin's **page** — it runs in Allkin's origin, with the user's session —
+key. For speech, the tool's **page** — it runs in Allkin's origin, with the user's session —
 asks for one listening session:
 
 ```
@@ -196,19 +199,19 @@ in the page's own language. See `plugins/recordr` (`web/stream.js`), the model t
 | Variable                  | Contenu                                            |
 |---------------------------|----------------------------------------------------|
 | `ALLKIN_PLUGIN_ID`        | L'identifiant                                      |
-| `ALLKIN_PLUGIN_DIR`       | Le dossier du plugin (remplacé à chaque mise à jour) |
+| `ALLKIN_PLUGIN_DIR`       | Le dossier de l'outil (remplacé à chaque mise à jour) |
 | `ALLKIN_PLUGIN_DATA`      | Le dossier où écrire ses données (conservé)        |
-| `ALLKIN_SHARE`            | The folder shared by every agent and plugin        |
-| `ALLKIN_PLUGIN_SHARE`     | The plugin's own folder in it (`share/<id>`)       |
+| `ALLKIN_SHARE`            | The folder shared by every agent and tool          |
+| `ALLKIN_PLUGIN_SHARE`     | The tool's own folder in it (`share/<id>`)         |
 | `ALLKIN_PLUGIN_SETTINGS`  | Tous les réglages, en JSON                         |
 | `PLUGIN_<CLÉ>`            | Chaque réglage (`PLUGIN_PORT`…)                    |
-| `PORT`                    | Le port à écouter (plugins web)                    |
+| `PORT`                    | Le port à écouter (outils web)                     |
 | `ALLKIN_PLUGIN_BASE_PATH` | Le préfixe de la page dans Allkin                  |
 
-Modifier un réglage redémarre le service. Sa sortie est visible dans le journal, sur la page du
-plugin. **N'écrire que dans `ALLKIN_PLUGIN_DATA`** : le dossier du plugin est remplacé à chaque
-mise à jour. The shared folder (`ALLKIN_SHARE`) is the exception: every agent and plugin writes
-there, and a plugin's own folder in it is `ALLKIN_PLUGIN_SHARE` (`share/<id>`), never another
+Modifier un réglage redémarre le service. Sa sortie est visible dans le journal, sur la page de
+l'outil. **N'écrire que dans `ALLKIN_PLUGIN_DATA`** : le dossier de l'outil est remplacé à chaque
+mise à jour. The shared folder (`ALLKIN_SHARE`) is the exception: every agent and tool writes
+there, and a tool's own folder in it is `ALLKIN_PLUGIN_SHARE` (`share/<id>`), never another
 name; agents may edit its content.
 
 ## Écrire la page web
@@ -220,15 +223,15 @@ name; agents may edit its content.
 ## Publier
 
 ```bash
-node scripts/catalogue.mjs          # vérifie les plugins et régénère catalogue.json
+node scripts/catalogue.mjs          # vérifie les outils et régénère catalogue.json
 node scripts/catalogue.mjs --check  # vérifie seulement (pour la CI)
 ```
 
 Le catalogue contient la taille et l'empreinte de chaque fichier : Allkin refuse d'installer un
-plugin dont un fichier ne correspond pas. **Relancer le script après chaque modification**, et
+outil dont un fichier ne correspond pas. **Relancer le script après chaque modification**, et
 committer `catalogue.json` avec le reste.
 
-Plugins sans dépendances de préférence : Allkin copie les fichiers tels quels, il ne lance pas de
-`npm install`. Un plugin qui en a besoin les installe lui-même au démarrage, dans
+Outils sans dépendances de préférence : Allkin copie les fichiers tels quels, il ne lance pas de
+`npm install`. Un outil qui en a besoin les installe lui-même au démarrage, dans
 `ALLKIN_PLUGIN_DATA` (voir `plugins/wetty/start.mjs`) — c'est la seule voie pour un module natif,
 compilé pour la machine.
